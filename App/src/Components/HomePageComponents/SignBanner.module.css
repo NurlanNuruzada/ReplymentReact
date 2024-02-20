@@ -1,0 +1,14 @@
+.MainContainer{
+    border: 1px solid black;
+    width: 100%;
+    height: 101px;
+}
+.SeccondContainer{
+    display: flex;
+}
+.LeftContainer {
+    display: flex;
+}
+.RightContainer{
+    display: flex;
+}
