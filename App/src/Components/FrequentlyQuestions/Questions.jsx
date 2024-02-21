@@ -71,7 +71,7 @@ export default function Questions() {
                                             }
                                         }}
                                     >
-                                        <p style={{ fontWeight: 600 }}>Accordion Item {i + 1}</p>
+                                        <p style={{ fontWeight: 600 }}>Is replyment free?</p>
                                     </AccordionSummary>
                                     <AccordionDetails
                                         sx={{
@@ -83,7 +83,7 @@ export default function Questions() {
                                             }
                                         }}
                                     >
-                                        Content for Accordion Item {i + 1}
+                                        Yes, it's free
                                     </AccordionDetails>
                                 </Accordion>
                             ))}
