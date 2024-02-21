@@ -7,7 +7,7 @@ export default function SignBanner() {
             <div className={Styles.MainContainer}>
                 <div className={Styles.SeccondContainer}>
                     <div className={Styles.LeftContainer}>
-                        <img className={Styles.BannerLogo} src={BannerLogo} />
+                        <img alt="banner" className={Styles.BannerLogo} src={BannerLogo} />
                         <h1 className={Styles.Title}>
                             Replyment
                         </h1>
