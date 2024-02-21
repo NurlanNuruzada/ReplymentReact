@@ -51,12 +51,18 @@
     margin: 40px 0;
     max-width: 526px;
 }
+.Main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .Title{
     font-size: 64px;
     font-weight:600;
 }
 .MainContainer{
     display: flex;
+    max-width: 1296px;
 }
 .RightContainer{
     display: flex;

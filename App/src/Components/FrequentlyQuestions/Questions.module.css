@@ -33,4 +33,9 @@
     width: 50%;
     height: 100%;
 }
-
+.AccordionWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Set the width of the AccordionWrapper */
+}

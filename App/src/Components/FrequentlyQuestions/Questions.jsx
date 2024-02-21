@@ -1,6 +1,5 @@
 import React from 'react'
 import Styles from "./Questions.module.css";
-import Accordion from './Accordion.jsx';
 
 export default function Questions() {
     return (
@@ -14,7 +13,7 @@ export default function Questions() {
                     </div>
                     <div className={Styles.FreQuestions_question}>
                         <div className={Styles.accordionWrapper}>
-                            <Accordion />
+                            
                         </div>
                     </div>
                 </div>

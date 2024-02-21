@@ -5,7 +5,7 @@ import ButtonsImage from '../../Images/Frame 6123.png'
 
 export default function Section2() {
     return (
-        <div>
+        <div className={Styles.Main}>
             <div className={Styles.MainContainer}>
                 <div className={Styles.LeftContainer}>
                     <h1 className={Styles.Title}>
