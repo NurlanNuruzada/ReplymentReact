@@ -7,14 +7,14 @@ export default function SignBanner() {
             <div className={Styles.MainContainer}>
                 <div className={Styles.SeccondContainer}>
                     <div className={Styles.LeftContainer}>
-                        <img src={BannerLogo} />
-                        <h1>
+                        <img className={Styles.BannerLogo} src={BannerLogo} />
+                        <h1 className={Styles.Title}>
                             Replyment
                         </h1>
                     </div>
                     <div className={Styles.RightContainer}>
-                        <button>Log In</button>
-                        <button>Get your button</button>
+                        <button className={Styles.LogInbutton}>Log In</button>
+                        <button className={Styles.Getbutton}>Get your button</button>
                     </div>
                 </div>
             </div>
