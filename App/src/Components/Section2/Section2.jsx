@@ -20,10 +20,10 @@ export default function Section2() {
                 </div>
                 <div className={Styles.RightContainer}>
                     <div className={Styles.LeftSection}>
-                        <img src={AudienceImage} alt="" />
+                        <img className={Styles.Image} src={AudienceImage} alt="" />
                     </div>
                     <div className={Styles.RightSection}>
-                        <img src={ButtonsImage} alt='' />
+                        <img className={Styles.Image} src={ButtonsImage} alt='' />
                     </div>
                 </div>
             </div>

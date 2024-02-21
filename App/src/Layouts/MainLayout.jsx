@@ -9,8 +9,8 @@ export function MainLayout() {
       <Banner />
       <div className={Styles.Outlet}>
         <Outlet />
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
