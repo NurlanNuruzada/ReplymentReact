@@ -7,7 +7,9 @@ export function MainLayout() {
   return (
     <div className={Styles.Main}>
       <Banner />
-      <Outlet />
+      <div className={Styles.Outlet}>
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
