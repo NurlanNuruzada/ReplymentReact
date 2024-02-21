@@ -78,12 +78,13 @@ export default function Questions() {
                                             color: "#616063",
                                             fontWeight: '500',
                                             fontSize: "16px",
+                                            // height: '10px',
                                             '&.MuiAccordionDetails-root': {
                                                 padding: index === i ? '20px 0': '0px'
                                             }
                                         }}
                                     >
-                                        Yes, it's free
+                                        Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free  Yes, it's free
                                     </AccordionDetails>
                                 </Accordion>
                             ))}
