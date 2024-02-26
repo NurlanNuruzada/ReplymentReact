@@ -4,13 +4,15 @@
     background-color: transparent;
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 0 !important;
 }
 
 .MainButton {
     width: 177px;
     height: 47px;
     display: flex;
-    margin-left: 100px;
+    margin-left: 70px;
     justify-content: space-between;
 }
 
@@ -34,7 +36,7 @@
 
 }
 
-.MainButton_Text > strong{
+.MainButton_Text>strong {
     color: white;
     font-size: 22px;
     font-weight: 600;
