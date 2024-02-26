@@ -5,15 +5,20 @@ import LastSection from '../../Components/LastSection/LastSection'
 import Whyreplyent from '../../Components/WhyReplyment/WhyReplyment'
 import FrequentlyAsked from '../../Components/FrequentlyQuestions/Questions'
 import Integrations from '../../Components/Integrations/Integrations'
+import './Home.scss'
+
+
 export default function Home() {
   return (
-    <>
-      <SignBanner />
-      <Section2 />
-      <Whyreplyent />
-      <Integrations />
-      <FrequentlyAsked />
-      <LastSection />
+    <>  
+      <div id="Home">
+        <SignBanner />
+        <Section2 />
+        <Whyreplyent />
+        <Integrations />
+        <FrequentlyAsked />
+        <LastSection />А
+      </div>
     </>
   )
 }

@@ -24,10 +24,10 @@ export default function Questions() {
                                     padding: 2,
                                     margin: "5px",
                                     maxWidth: "100%",
-                                    border: '2px solid #F2F2F2',
                                     borderRadius: "20px",
                                     fontSize: "22px",
                                     lineHeight: "110%",
+                                    backgroundColor: '#0D0D0D',
                                     transition: '0.2s ease',
                                     '& button:not([aria-expanded="true"])': {
                                         transition: '0.2s ease',
@@ -71,11 +71,12 @@ export default function Questions() {
                                             }
                                         }}
                                     >
-                                        <p style={{ fontWeight: 600 }}>Is replyment free?</p>
+                                        <p style={{ fontWeight: 600, color: '#E1E0E4' }}>Is replyment free?</p>
                                     </AccordionSummary>
                                     <AccordionDetails
                                         sx={{
-                                            color: "#616063",
+                                            color: "#E1E0E4",
+                                            opacity: '70%',
                                             fontWeight: '500',
                                             fontSize: "16px",
                                             // height: '10px',
