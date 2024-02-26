@@ -2,6 +2,9 @@
 import { MainLayout } from "../Layouts/MainLayout";
 import { useRoutes } from "react-router";
 import Home from "../Pages/Home/Home";
+import NotFound from "../Pages/Errors/NotFound/NotFound";
+import Server from "../Pages/Errors/Server/Server";
+
 export default function Routes() {
   let routes = [
     {
@@ -9,11 +12,19 @@ export default function Routes() {
       element: <MainLayout />,
       children: [
         {
-          element: <Home/>,
+          element: <Home />,
           path: "/",
         },
       ],
     },
+    {
+      path: "/server-error",
+      element: <Server />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    }
   ];
-return useRoutes(routes);
+  return useRoutes(routes);
 }

@@ -1,0 +1,53 @@
+.NotFoundMain{
+    background-color: #000000;
+    background-image: url('../../../Images/Frame 6210.png');
+    background-size: cover;
+}
+.dordSifirDordMain{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dordSifirDord{
+    width: 569px;
+    height: 386px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dordSifirDord_satusCode{
+    width: 100%;
+    height: 234px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dordSifirDord_satusCode > h1{
+    font-size: 303.66px;
+    line-height: 367.02px;
+    color: white;
+}
+.dordSifirDord_goBack{
+    width: 100%;
+    height: 152px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.dordSifirDord_goBack > button{
+    width: 260px;
+    height: 102px;
+    border-radius: 90px;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    font-size: 32px;
+    text-align: center;
+}
