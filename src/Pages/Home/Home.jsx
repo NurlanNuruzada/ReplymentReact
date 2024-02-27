@@ -17,7 +17,7 @@ export default function Home() {
         <Whyreplyent />
         <Integrations />
         <FrequentlyAsked />
-        <LastSection />А
+        <LastSection />
       </div>
     </>
   )

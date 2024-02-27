@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './NotFound.module.css';
 import Navbar from '../../../Navbar/Navbar';
+import { Link } from 'react-router-dom';
 
 const NotFound = () => {
     return (
@@ -11,7 +12,9 @@ const NotFound = () => {
                     <h1>404</h1>
                 </div>
                 <div className={Styles.goBack}>
-                    <button>Go Back</button>
+                    {/* <Link to={"/"}> */}
+                        <button>Go Back</button>
+                    {/* </Link> */}
                 </div>
             </div>
         </div>
