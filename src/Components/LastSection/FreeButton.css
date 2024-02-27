@@ -1,0 +1,129 @@
+.custom-button {
+    display: inline-block;
+    width: 204px;
+    height: 47px;
+    border-radius: 122px;
+    border: #000000 2px solid;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    background-color: #1C1B1F;
+    color: #F2F2F2;
+    transition: background-color 2s;
+}
+
+.custom-button:hover {
+    background-color: black;
+}
+
+.custom-button:hover span {
+    animation: changeColor 10s infinite alternate;
+}
+
+@keyframes changeColor {
+    0% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    10% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+
+    }
+
+    20% {
+        color: linear-gradient(120deg, #702d2d, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    30% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    40% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    50% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    60% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    70% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    80% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    90% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    100% {
+        color: linear-gradient(120deg, #FF0102, #FF014F, #FF018F, #FF01FD, #AB0EFF, #7B16FF, #531EFF, #2728FF, #1B61FF, #1296FF, #01F5F5, #01FF91, #04FF01, #76FF01, #ABFF01, #D2FF01, #FEFF01, #FFE801, #FFD301, #FFBF01, #FFA901, #FF9201, #FF7301, #FF4901);
+        background-image: url("../../Images/gradient-text.gif");
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+    }
+
+}
