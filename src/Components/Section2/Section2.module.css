@@ -1,0 +1,75 @@
+.Getbutton {
+    position: relative;
+    width: 204px;
+    height: 47px;
+    border-radius: 122px;
+    border: #000000 2px solid;
+    color: #F2F2F2;
+    background-color: #1C1B1F;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+.Getbutton {
+    position: relative;
+    width: 204px;
+    height: 47px;
+    border-radius: 122px;
+    border: #000000 2px solid;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+
+}
+.Getbutton:hover {
+    color: black;
+    background-color: white;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-image: url("../../Images/gradient-text.gif");
+    -webkit-text-fill-color: #1c1b1f50;
+    -moz-text-fill-color: #1c1b1f50;
+}
+.GradientText{
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; 
+    background-image: url("../../Images/gradient-text.gif"); 
+    -webkit-text-fill-color: #1c1b1f50;
+    -moz-text-fill-color: #1c1b1f50;
+}
+
+.Desctiption{
+    color: #1C1B1F;
+    opacity: 50%;
+    width: 500;
+    font-size: 16px;
+    margin: 40px 0;
+    max-width: 526px;
+}
+.Main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Title{
+    font-size: 64px;
+    font-weight:600;
+}
+.MainContainer{
+    display: flex;
+    max-width: 1296px;
+}
+.RightContainer{
+    display: flex;
+    gap: 15px;
+    margin-left: 24px;
+    align-items: center;
+}
+.Image{
+    height: 359px;
+}

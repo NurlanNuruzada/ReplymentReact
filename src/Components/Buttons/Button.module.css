@@ -1,0 +1,32 @@
+.MainBtn {
+    width: 204px;
+    height: 76.5px;
+    border-radius: 22.5px;
+    border: 2.25px solid gray;
+    transform: rotate(17.74°);
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainBtn>img {
+    width: 28.5px;
+    height: 28.5px;
+    /* position: absolute;
+    top: 77.72px;
+    left: 30.17px; */
+}
+
+.MainBtn>p {
+    min-width: 104px;
+    height: 16px;
+    /* position: absolute; */
+    top: 67.74px;
+    left: 81.05px;
+    font-weight: 600;
+    line-height: 24.75px;
+    font-size: 22.5px;
+    margin-left: 14px;
+    margin-right: -15px;
+}
