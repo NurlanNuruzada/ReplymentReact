@@ -4,18 +4,24 @@ import { useRoutes } from "react-router";
 import Home from "../Pages/Home/Home";
 import NotFound from "../Pages/Errors/NotFound/NotFound";
 import Server from "../Pages/Errors/Server/Server";
+import UnderConstuction from "../Pages/UnderConstruction/UnderConstuction";
 
 export default function Routes() {
   let routes = [
     {
-      path: "/",
+      path: "/beta",
       element: <MainLayout />,
       children: [
         {
+          path: "/beta/",
           element: <Home />,
-          path: "/",
+          
         },
       ],
+    },
+    {
+      element: <UnderConstuction />,
+      path: "/",
     },
     {
       path: "/server-error",
