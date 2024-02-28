@@ -1,7 +1,5 @@
 import React from 'react'
 import Styles from './LastSection.module.css'
-import Button from '../Buttons/Button'
-import { buttonJson } from "../Buttons/ButtonJson/button";
 
 export default function LastSection() {
 

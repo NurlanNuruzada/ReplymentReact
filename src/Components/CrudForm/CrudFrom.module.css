@@ -1,0 +1,60 @@
+.MainContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 0.9px solid #1A1A1A;
+    border-bottom: 0.9px solid #1A1A1A;
+    padding: 7.21px 0px;
+}
+
+.IconContaienr {
+    border: solid #1A1A1A 1.35px;
+    border-radius: 13.51px;
+    width: 38.73px;
+    height: 38.73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.From {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    width: 248.61px;
+    left: 171.14px;
+    padding: 12px 15px;
+    /* Adjusted padding notation */
+    border-radius: 13.51px;
+    border: 1.35px solid #1A1A1A;
+    color: #E1E0E480;
+}
+
+.EditIcon {
+    width: 18.92px;
+    height: 18.92px;
+    top: 17.11px;
+    left: 53.14px;
+}
+
+.LeftConatiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 17.11px;
+    width: 450px;
+}
+
+.RigntContainer {
+    display: flex;
+    align-items: center;
+    gap: 5.4px;
+}
+
+.IconAndName {
+    display: flex;
+    align-items: center;
+    gap: 4.5px;
+}

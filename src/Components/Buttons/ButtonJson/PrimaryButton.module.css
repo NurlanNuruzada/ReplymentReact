@@ -1,0 +1,67 @@
+.Img {
+    height: 17px;
+}
+.MainContainer button{
+    display: flex;
+    gap: 13.5px;
+    align-items: center;
+}
+.MainContainer svg{
+    padding: 0 !important;
+    margin: 0;
+    font-size: 17px;
+}
+button{
+    font-size: 13.51px;
+    font-weight: 600 !important;
+    line-height: 14.86px  !important;
+    align-items: center;
+    cursor: pointer;
+}
+.PrimaryButton {
+    background-color: rgba(54, 220, 115, 0.13);
+    box-shadow: 0;
+    border-radius: 13.51px;
+    border: 1.35px solid #36DC73;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 400;
+    height: 45.94px;
+    width: max-content;
+    transition: background-color 0.3s ease-in-out;
+    color: white ;
+}
+.PremiumButton{
+    background-color: rgb(24, 20, 9);
+    border: 1.35px solid #F0C558;
+    box-shadow: 0;
+    border-radius: 13.51px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 400;
+    height: 45.94px;
+    width: max-content;
+    transition: background-color 0.3s ease-in-out;
+    color: white ;
+}
+.NormalButton{
+    border-color: #E1E0E4;
+    opacity: 70%;
+    color: #E1E0E4;
+    background-color: transparent;
+    border: 1.35px solid ;
+    box-shadow: 0;
+    border-radius: 13.51px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 400;
+    height: 45.94px;
+    width: max-content;
+    transition: background-color 0.3s ease-in-out;
+}

@@ -1,0 +1,12 @@
+.MainContaier {
+    width: 38.73px;
+    height: 38.73px;
+    top: 7.21px;
+    left: 706.19px;
+    border-radius: 47.74px;
+    background: #F0C558;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
