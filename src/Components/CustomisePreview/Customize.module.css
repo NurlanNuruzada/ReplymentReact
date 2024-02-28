@@ -1,0 +1,81 @@
+.Title {
+    padding-bottom: 10px;
+    border: 0px, 0px, 1.35px, 0px;
+    border-bottom: 1.35px solid #1A1A1A
+}
+
+.CrudContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.PreviewContainer {
+    /* padding: 0 64px ; */
+    background-color: black;
+    border: 7px #4D4D4D solid;
+    border-radius: 45.04px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    gap: 10px;
+    padding: 30px;
+}
+
+.Navbar {
+    width: 100%;
+    margin: 20px 0;
+    height: 91px;
+}
+
+.RightContainer {
+    width: 100%;
+    max-width: 850px;
+}
+
+.leftContainer {
+    width: 100%;
+    max-width: 300px;
+}
+
+.ContentContainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.ButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 20px;
+}
+
+.ActiveText {
+    font-family: Urbanist;
+    font-size: 22px;
+    font-weight: 400 !important;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 15px 0;
+
+}
+
+@media screen and (max-width: 1165px) {
+    .leftContainer {
+        display: none;
+    }
+}
+
+h2 {
+    font-family: Urbanist;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 24px 0;
+}
