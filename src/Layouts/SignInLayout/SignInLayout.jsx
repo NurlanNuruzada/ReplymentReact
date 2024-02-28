@@ -7,8 +7,8 @@ export default function SignInLayout() {
     return (
         <div className={Styles.Main}>
             <div className={Styles.Outlet}>
-                <ChakraProvider >
-                    <Header ShowButtons={true} />
+                <ChakraProvider  >
+                    <Header ShowButtons={false} />
                 </ChakraProvider>
                 <Outlet />
             </div>

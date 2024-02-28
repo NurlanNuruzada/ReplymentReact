@@ -7,6 +7,8 @@ import {
     MenuList,
     MenuItem,
     IconButton,
+    Grid,
+    GridItem,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import LoginIcon from '@mui/icons-material/Login';
@@ -29,39 +31,47 @@ export default function Header({ ShowButtons }) {
             window.removeEventListener('resize', handleWindowResize);
         };
     }, []);
-    const isSmallScreen = WindowSize.innerWidth<="750" ? true : false
+    const isSmallScreen = WindowSize.innerWidth <= "750" ? true : false
     return (
-
-        <div className={Styles.MainContainer}>
-            <div className={Styles.LogoContainer}>
+        <Grid templateColumns='repeat(12, 1fr)'  className={Styles.MainContainer}>
+            <GridItem colSpan={1}></GridItem>
+            <GridItem colSpan={2} className={Styles.LogoContainer}>
                 <img src={MainLogo} alt="" />
                 <h1>Replyment</h1>
-            </div>
+            </GridItem>
+            <GridItem colSpan={5}></GridItem>
             {ShowButtons && !isSmallScreen ? (
-                <div className={Styles.ButtonContainer}>
-                    <button className={Styles.LogInButton}>Log In</button>
-                    <button className={Styles.RegisterButton}>Get your button</button>
-                </div>
+                <>
+                    <GridItem colSpan={1}></GridItem>
+                    <GridItem colSpan={3} className={Styles.ButtonContainer}>
+                        <button className={Styles.LogInButton}>Log In</button>
+                        <button className={Styles.RegisterButton}>Get your button</button>
+                    </GridItem>
+                    <GridItem colSpan={1}></GridItem>
+                </>
             ) : null}
 
-            {isSmallScreen ? (
-                <Menu>
-                    <MenuButton
-                        as={IconButton}
-                        aria-label='Options'
-                        icon={<HamburgerIcon />}
-                        variant='outline'
-                    />
-                    <MenuList>
-                        <MenuItem>
-                            Log In
-                        </MenuItem>
-                        <MenuItem>
-                            Get your button
-                        </MenuItem>
-                    </MenuList>
-                </Menu>
+            {ShowButtons && isSmallScreen ? (
+                <GridItem>
+
+                    <Menu>
+                        <MenuButton
+                            as={IconButton}
+                            aria-label='Options'
+                            icon={<HamburgerIcon />}
+                            variant='outline'
+                        />
+                        <MenuList>
+                            <MenuItem>
+                                Log In
+                            </MenuItem>
+                            <MenuItem>
+                                Get your button
+                            </MenuItem>
+                        </MenuList>
+                    </Menu>
+                </GridItem>
             ) : null}
-        </div>
+        </Grid>
     )
 }
