@@ -7,6 +7,7 @@ import Server from "../Pages/Errors/Server/Server";
 import UnderConstuction from "../Pages/UnderConstruction/UnderConstuction";
 import { ChakraProvider } from '@chakra-ui/react'
 import SignInPage from "../Pages/SignInPage/SignInPage";
+import SignInLayout from "../Layouts/SignInLayout/SignInLayout";
 
 export default function Routes() {
   let routes = [
@@ -18,10 +19,15 @@ export default function Routes() {
           path: "/beta/",
           element: <Home />,
         },
+      ],
+    },
+    {
+      path: "/beta",
+      element: <SignInLayout />,
+      children: [
         {
           path: "/beta/SignUp",
           element: <SignInPage />,
-
         },
       ],
     },

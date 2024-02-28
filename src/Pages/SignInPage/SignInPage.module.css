@@ -1,0 +1,11 @@
+.LeftContainer {}
+.MainContainer{
+    overflow: hidden;
+}
+.RightContainer {
+    position: relative;
+    right: -100px !important;
+    Width: 1061px;
+    Height: 803px;
+    background-color: blue;
+}
