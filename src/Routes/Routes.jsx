@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import NotFound from "../Pages/Errors/NotFound/NotFound";
 import Server from "../Pages/Errors/Server/Server";
 import UnderConstuction from "../Pages/UnderConstruction/UnderConstuction";
+import { ChakraProvider } from '@chakra-ui/react'
 
 export default function Routes() {
   let routes = [
@@ -15,12 +16,13 @@ export default function Routes() {
         {
           path: "/beta/",
           element: <Home />,
-          
+
         },
       ],
     },
     {
-      element: <UnderConstuction />,
+
+      element: <ChakraProvider><UnderConstuction /></ChakraProvider>,
       path: "/",
     },
     {
