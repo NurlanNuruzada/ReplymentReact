@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #000000;
 }
 
 .LeftContainer {
@@ -12,7 +13,7 @@
 }
 
 .Title {
-    color: #000000;
+    color: white;
     font-size: 24px;
     font-weight: 700;
     padding: 15px;
@@ -32,9 +33,9 @@
     width: 101px;
     height: 47px;
     border-radius: 122px;
-    border: #000000 2px solid;
-    color: #000000;
-    background-color: white;
+    border:none;
+    color: white;
+    background-color: black;
     font-size: 16px;
     font-weight: 700;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -47,9 +48,9 @@
     height: 47px;
     border-radius: 122px;
     border: #000000 2px solid;
-    color: #F2F2F2;
-    background-color: black;
-    font-size: 16px;
+    color: black;
+    background-color: white;
+    font-size: 16px;    
     font-weight: 700;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     cursor: pointer;

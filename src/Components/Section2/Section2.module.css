@@ -1,75 +1,111 @@
-.Getbutton {
-    position: relative;
-    width: 204px;
-    height: 47px;
-    border-radius: 122px;
-    border: #000000 2px solid;
-    color: #F2F2F2;
-    background-color: #1C1B1F;
-    font-size: 16px;
-    font-weight: 700;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    cursor: pointer;
-}
-.Getbutton {
-    position: relative;
-    width: 204px;
-    height: 47px;
-    border-radius: 122px;
-    border: #000000 2px solid;
-    font-size: 16px;
-    font-weight: 700;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    cursor: pointer;
-
-}
-.Getbutton:hover {
-    color: black;
-    background-color: white;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    background-image: url("../../Images/gradient-text.gif");
-    -webkit-text-fill-color: #1c1b1f50;
-    -moz-text-fill-color: #1c1b1f50;
-}
-.GradientText{
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text; 
-    background-image: url("../../Images/gradient-text.gif"); 
-    -webkit-text-fill-color: #1c1b1f50;
-    -moz-text-fill-color: #1c1b1f50;
-}
-
-.Desctiption{
-    color: #1C1B1F;
-    opacity: 50%;
-    width: 500;
-    font-size: 16px;
-    margin: 40px 0;
-    max-width: 526px;
-}
-.Main{
+.Main {
+    width: 100%;
+    height: 507px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    background-color: red;
 }
-.Title{
-    font-size: 64px;
-    font-weight:600;
+
+.MainContainer {
+    width: 100%;
+    height: 100%;
+    background-color: black;
 }
-.MainContainer{
+
+.BetaVersion {
+    width: 100%;
+    height: 58px;
+    /* background-color: black; */
+}
+
+.BetaVersion>div {
+    position: relative;
+    color: rgba(255, 0, 31, 0.7);
+    font-weight: 600;
+    font-size: 14px;
+    width: 134px;
+    height: 10px;
+    line-height: 15.4px;
+    border-radius: 59px;
+    gap: 10px;
+    width: 195px;
+    height: 48px;
+    top: 5px;
+    padding: 14px, 17px, 14px, 14px;
+    background-color: rgba(255, 0, 31, 0.2);
+    text-align: center;
     display: flex;
-    max-width: 1296px;
-}
-.RightContainer{
-    display: flex;
-    gap: 15px;
-    margin-left: 24px;
+    justify-content: center;
     align-items: center;
 }
-.Image{
-    height: 359px;
+
+.BetaVersion>div>img {
+    position: absolute;
+    width: 18.33px;
+    height: 15.33px;
+    top: 15.67px;
+    left: 14.83px;
+    color: rgba(255, 0, 31, 0.7);
 }
+
+.Engage {
+    width: 100%;
+    height: 479px;
+    /* padding: 40px 80px 80px 80px; */
+    gap: 32px;
+    background-color: black;
+    display: flex;
+    justify-content: start;
+    background-image: url('./Screen.png');
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 1200px 500px;
+}
+
+.EngageLeft {
+    min-width: 768px;
+    height: 359px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.EngageLeft>h1 {
+    width: 768px;
+    height: 185px;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 70.4px;
+    color: white;
+}
+
+.EngageLeft>p {
+    width: 526px;
+    height: 47px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17.6px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.Getbutton {
+    position: relative;
+    width: 202px;
+    height: 55px;
+    border-radius: 48px;
+    gap: 10px;
+    color: rgba(28, 27, 31, 1);
+    background-color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17.6px;
+    cursor: pointer;
+    border: none;
+}
+
+.Getbutton:hover {
+    color: white;
+    background-color: rgba(28, 27, 31, 1);
+}
+

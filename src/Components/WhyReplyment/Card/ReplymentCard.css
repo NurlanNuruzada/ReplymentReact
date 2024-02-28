@@ -1,0 +1,53 @@
+.ReplymentCard_main {
+    max-width: 501px;
+    height: 304px;
+    border-radius: 44px;
+    padding: 40px;
+    gap: 25px;
+    border: 2px solid #CBCED2;
+    display: flex;
+    flex-direction: column;
+}
+
+.ReplymentCard_main>span {
+    width: 44px;
+    height: 14px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: #1C1B1F;
+    opacity: 50%;
+}
+
+.ReplymentCard_main>strong {
+    width: 393px;
+    height: 22px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 35.2px;
+    color: #1C1B1F;
+}
+
+.ReplymentCard_main>p {
+    width: 421px;
+    height: 58px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: #1C1B1F;
+    opacity: 50%;
+}
+
+.ReplymentCard_main>button {
+    width: 138px;
+    height: 55px;
+    border-radius: 48px;
+    border: 2px solid #CBCED2;
+    gap: 10px;
+    padding: 22px, 28px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17.6px;
+    color: #1C1B1F;
+    background-color: transparent;
+}

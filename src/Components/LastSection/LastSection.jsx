@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from './LastSection.module.css'
 import Button from '../Buttons/Button'
 import { buttonJson } from "../Buttons/ButtonJson/button";
+import BtnDiv from './BtnDiv/BtnDiv';
 
 export default function LastSection() {
 
@@ -18,7 +19,9 @@ export default function LastSection() {
                     <h2>Get started now and customize your widget to match your brand's style and tone.</h2>
                     <p>Elevate your online presence and engage with your visitors in a way that reflects your unique identity.</p>
                     <button>Get your free button</button>
-                    <div className={Styles.bcImg}></div>
+                    <div className={Styles.bcImg}>
+                        <BtnDiv />
+                    </div>
                 </div>
             </div>
         </div>

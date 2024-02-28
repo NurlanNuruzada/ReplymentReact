@@ -92,14 +92,13 @@
     background-color: transparent;
 }
 
-.Customize>div .bcImg {
-    width: 74%;
-    height: 70%;
+.bcImg{
+    width: auto;
+    height: auto;
     position: absolute;
-    bottom: 0;
-    right: 0;
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
-    background-color: white;
-    background-image: url('./Frame\ 6210.png');
-    background-size: cover;
+    z-index: -1;
+}
+.bcImg>div{
+    margin-top: 20px;
+    transform: translateY(76%) rotate(-23deg); /* Y ekseninde aşağı kaydırma ve döndürme */
 }
