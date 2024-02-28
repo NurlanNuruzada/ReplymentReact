@@ -7,13 +7,12 @@
     align-items: center;
     gap: 15px;
     font-family: Urbanist;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: left;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    text-align: left !important;
 
 }
-
 img {
     width: 47px;
     height: 47px;
