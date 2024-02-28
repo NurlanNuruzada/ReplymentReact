@@ -15,7 +15,6 @@ export default function UnderConstuction() {
             <h1 className={Styles.WelcomeTitle}>Constuction</h1>
           </div>
           <div>
-            
           </div>
           <div className={Styles.DownContainer}>
             <CustomizePreview />

@@ -35,11 +35,25 @@
     color: transparent;
     /* Hide original text */
 
-    font-size: calc(2.5rem + 5.5vw);
-    line-height: calc(1.5rem + 5.5vw);
+    font-size: calc(0.5rem + 5.3vw);
+    line-height: calc(1.5rem + 4vw);
     font-weight: 600;
     letter-spacing: 0em;
     text-align: left;
+
+}
+@media screen and (max-width: 1168px) {
+   .WelcomeTitle{
+    font-size: calc(1.5rem + 5.5vw);
+    line-height: calc(1.5rem + 5.5vw);
+   }
+
+}
+@media screen and (max-width: 700px) {
+   .WelcomeTitle{
+    font-size: calc(2.5rem + 5.5vw);
+    line-height: calc(2rem + 5.5vw);
+   }
 
 }
 
@@ -100,7 +114,6 @@
     position: relative;
     transform-style: preserve-3d;
     border-radius: 1rem;
-
     &::after {
         content: "";
         position: absolute;

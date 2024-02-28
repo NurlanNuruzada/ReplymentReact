@@ -35,7 +35,6 @@ export default function CustomizePreview() {
           </div>
           <div className={Styles.RightContainer}>
             <h1 className={Styles.Title}>Customize</h1>
-            <div className={Styles.Line}></div>
             <h1 className={Styles.ActiveText}>Active messaging apps</h1>
             <div className={Styles.ButtonContainer}>
               <Button IconColor={"#36DC73"} Title={"WhatsApp"} Svg={WhatsAppIcon} Class={"PrimaryButton"} />
@@ -48,11 +47,6 @@ export default function CustomizePreview() {
               <Button IconColor={"#FF1C1C"} Title={"YouTube"} Svg={YouTubeIcon} Class={"NormalButton"} />
               <Button IconColor={"#1E78A4"} Title={"Telegram"} Svg={TelegramIcon} Class={"NormalButton"} />
               <Button Title={"Custom link"} Svg={LinkIcon} Class={"PremiumButton"} />
-            </div>
-            <div className={Styles.CrudContainer}>
-              <CrudForm Title={"WhatsApp"} EdittedIcon={WhatsAppIcon} isPremium={true} />
-              <CrudForm Title={"Instagram"} EdittedIcon={InstagramIcon} borderBottom={"none"} isPremium={true} />
-              <CrudForm Title={"Custom link"} EdittedIcon={LinkIcon} isPremium={true} />
             </div>
               <h2>Customize your button</h2>
               <h2>Color</h2>
