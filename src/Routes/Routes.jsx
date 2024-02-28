@@ -6,6 +6,7 @@ import NotFound from "../Pages/Errors/NotFound/NotFound";
 import Server from "../Pages/Errors/Server/Server";
 import UnderConstuction from "../Pages/UnderConstruction/UnderConstuction";
 import { ChakraProvider } from '@chakra-ui/react'
+import SignInPage from "../Pages/SignInPage/SignInPage";
 
 export default function Routes() {
   let routes = [
@@ -16,6 +17,10 @@ export default function Routes() {
         {
           path: "/beta/",
           element: <Home />,
+        },
+        {
+          path: "/beta/SignUp",
+          element: <SignInPage />,
 
         },
       ],
