@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <>
       <div id="Home">
-        <SignBanner />
+        {/* <SignBanner /> */}
         <Section2 />
-        <Whyreplyent />
-        <Integrations />
-        <FrequentlyAsked />
-        <LastSection />
+        {/* <Whyreplyent /> */}
+        {/* <Integrations /> */}
+        {/* <FrequentlyAsked /> */}
+        {/* <LastSection /> */}
       </div>
     </>
   )

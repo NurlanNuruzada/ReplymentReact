@@ -10,7 +10,7 @@ export default function Routes() {
   let routes = [
     {
       path: "/beta",
-      element: <MainLayout />,
+      // element: <MainLayout />,
       children: [
         {
           path: "/beta/",

@@ -21,6 +21,7 @@ export default function Section2() {
                         <button className={Styles.Getbutton}>Get your free button</button>
                     </div>
                 </div>
+                <div id={Styles.sectionOneHomePageResponsive}></div>
             </div>
         </div>
     )
