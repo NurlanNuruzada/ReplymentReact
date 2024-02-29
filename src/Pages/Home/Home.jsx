@@ -14,10 +14,10 @@ export default function Home() {
       <div id="Home">
         {/* <SignBanner /> */}
         <Section2 />
-        {/* <Whyreplyent /> */}
-        {/* <Integrations /> */}
-        {/* <FrequentlyAsked /> */}
-        {/* <LastSection /> */}
+        <Whyreplyent />
+        <Integrations />
+        <FrequentlyAsked />
+        <LastSection />
       </div>
     </>
   )

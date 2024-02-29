@@ -40,7 +40,7 @@ export default function Questions() {
                                     },
                                     '& .MuiSvgIcon-root.MuiSvgIcon-sizeMd.css-1r2bn3-JoySvgIcon-root': {
                                         fontSize: "40px",
-                                        color:"#616063"
+                                        color: "#616063"
                                     },
                                 },
                                 [`& .${accordionClasses.root}.${accordionClasses.expanded}`]: {
@@ -66,8 +66,12 @@ export default function Questions() {
                                         sx={{
                                             '&.MuiAccordionSummary-root': {
                                                 button: {
-                                                    padding: index === i ? '12px 8px' : '12px 8px'
+                                                    padding: index === i ? '12px 8px' : '12px 8px',
+                                                    border: 'none'
                                                 }
+                                            },
+                                            '&.Mui-expanded': {
+                                                borderBottom: '1px solid rgba(124, 124, 126, 1)'
                                             }
                                         }}
                                     >
@@ -81,7 +85,7 @@ export default function Questions() {
                                             fontSize: "16px",
                                             // height: '10px',
                                             '&.MuiAccordionDetails-root': {
-                                                padding: index === i ? '20px 0': '0px'
+                                                padding: index === i ? '20px 0' : '0px'
                                             }
                                         }}
                                     >

@@ -28,6 +28,3 @@ export default function LastSection() {
     )
 }
 
-// {buttonJson.map((item, index) => (
-//     <Button key={index} img={item.img} title={item.title} bcColor={item.bcColor} />
-// ))}

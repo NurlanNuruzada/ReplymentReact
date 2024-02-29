@@ -8,7 +8,7 @@
 }
 
 .FreQuestions {
-    width: 1296px;
+    width: 90%;
     min-height: 464px;
     display: flex;
     justify-content: space-between;
@@ -27,16 +27,12 @@
     height: 111px;
 }
 
-.FreQuestions_title>div>strong {
-    color: #1C1B1F;
-    font-size: 32px;
-}
-
 .Title {
     color: #1C1B1F;
     font-weight: 600;
     font-size: 48px;
     color: #FFFFFF;
+
 }
 
 .FreQuestions_question {
@@ -49,7 +45,6 @@
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    /* Set the width of the AccordionWrapper */
 }
 
 .Accordion {
@@ -60,4 +55,65 @@
 
 .Accordion:hover {
     background-color: none;
+}
+
+
+@media screen and (max-width: 770px) {
+    .FreQuestionsMain {
+        width: 100%;
+        min-height: 730px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+    }
+
+    .FreQuestions {
+        width: 90%;
+        min-height: 464px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .FreQuestions_title {
+        width: 100%;
+        min-height: 60px;
+        display: flex;
+        position: relative;
+    }
+
+    .FreQuestions_title>div {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .Title {
+        color: #1C1B1F;
+        font-weight: 600;
+        font-size: 32px;
+        color: #FFFFFF;
+        margin-left: 15px;
+    }
+
+    .FreQuestions_question {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .Title {
+        color: #1C1B1F;
+        font-weight: 600;
+        font-size: 24px;
+        color: #FFFFFF;
+        margin-left: 15px;
+        line-height: 26.4px;
+    }
 }
