@@ -10,7 +10,7 @@ const Navbar = () => {
                 <img src={Img} />
             </div>
             <div className={Styles.MainButton_Text}>
-                <strong>Replyments</strong>
+                <strong>Replyment</strong>
             </div>
         </div>
     </div>
