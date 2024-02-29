@@ -21,6 +21,7 @@ export default function SignUpPage() {
                 </GridItem>
                 <GridItem className={Styles.Spacer}  colSpan={1}></GridItem>
                 <GridItem  className={Styles.RightContainer} colSpan={6}>
+                    <div  className={Styles.Effect}> </div>
                     <img className={Styles.Image} src={AppImage} alt="" />
                 </GridItem>
             </Grid>
