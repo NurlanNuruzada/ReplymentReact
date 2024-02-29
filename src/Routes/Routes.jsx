@@ -8,6 +8,7 @@ import UnderConstuction from "../Pages/UnderConstruction/UnderConstuction";
 import { ChakraProvider } from '@chakra-ui/react'
 import SignInPage from "../Pages/SignInPage/SignInPage";
 import SignInLayout from "../Layouts/SignInLayout/SignInLayout";
+import SignUpPage from "../Pages/SignUpPage/SignUpPage";
 
 export default function Routes() {
   let routes = [
@@ -26,8 +27,12 @@ export default function Routes() {
       element: <SignInLayout />,
       children: [
         {
-          path: "/beta/SignUp",
+          path: "/beta/Login",
           element: <SignInPage />,
+        },
+        {
+          path: "/beta/Register",
+          element:<SignUpPage />
         },
       ],
     },

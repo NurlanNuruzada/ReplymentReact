@@ -11,7 +11,6 @@ export function MainLayout() {
     <div className={Styles.Main}>
       <div className={Styles.Outlet}>
         <ChakraProvider >
-          <Header ShowButtons={true} />
         </ChakraProvider>
         <Outlet />
         <Footer />
