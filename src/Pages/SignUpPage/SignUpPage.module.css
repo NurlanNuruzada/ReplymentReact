@@ -72,7 +72,7 @@
 }
 
 .RightContainer {
-    --s: 0px;
+    --s: -17px;
     transform-style: preserve-3d;
 
     &::after {
@@ -85,8 +85,7 @@
         border-radius: inherit;
         pointer-events: none;
         opacity: 0.35;
-        transition: background-color 1s ease-in-out;
-        animation: 5s rotate linear infinite;
+        animation: 5s rotate infinite ;
     }
 }
 
