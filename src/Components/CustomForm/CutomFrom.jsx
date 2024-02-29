@@ -8,7 +8,7 @@ export default function CutomFrom({ Title, InnerText }) {
         <div className={Styles.MainContainer}>
             <form className={Styles.FormContainer} action="" method="get">
                 <label for="fname">{Title}</label>
-                <input placeholder={InnerText} />
+                <input  placeholder={InnerText} />
             </form>
         </div>
     )
