@@ -20,19 +20,19 @@ export default function Routes() {
           path: "/beta/",
           element: <Home />,
         },
+      ],
+    },
+    {
+      path: "/beta",
+      element: <SignInLayout />,
+      children: [
         {
-          path: "/beta/Account",
-          element: <SignInLayout />,
-          children: [ 
-            {
-              path: "/beta/Account/Login",
-              element: <SignInPage />,
-            },
-            {
-              path: "/beta/Account/Register",
-              element:<SignUpPage />
-            },
-          ],
+          path: "/beta/Login",
+          element: <SignInPage />,
+        },
+        {
+          path: "/beta/Register",
+          element:<SignUpPage />
         },
       ],
     },
