@@ -110,6 +110,13 @@
 }
 
 @media screen and (max-width: 700px) {
+    .LeftContainer {
+        grid-column: span 9 !important;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
     .MainHeader {
         font-family: Urbanist;
         font-size: 32px;
@@ -123,16 +130,14 @@
         display: none;
     }
 
-    .LeftContainer {
-        grid-column: span 9 !important;
-        padding: 15px;
-        width: 345px !important;
+
+    .MainContainer {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
     }
 
     .InputContainer {
-        width: 309px !important;
+        width: 0px;
     }
 
     .LoginButton {
@@ -160,4 +165,19 @@
         grid-template-columns: repeat(6, 1fr) !important;
     }
 
+}
+@media screen and (max-width: 700px) {
+    .LeftContainer {
+        width: 497px !important;
+    }
+}
+@media screen and (max-width: 630px) {
+    .LeftContainer {
+        width: 397px !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .LeftContainer {
+        width: 347px !important;
+    }
 }
