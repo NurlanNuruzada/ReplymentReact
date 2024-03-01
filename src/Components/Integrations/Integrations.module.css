@@ -64,9 +64,7 @@
 
 }
 
-@media screen and (max-width: 1058px) {
-
-}
+@media screen and (max-width: 1058px) {}
 
 @media screen and (max-width: 836px) {
     .MainContainer {
@@ -91,13 +89,23 @@
 }
 
 @media screen and (max-width: 550px) {
+
+    .MainContainer>div {
+        max-width: 100%;
+        height: 100%;
+    }
+
     .Integrations_title {
         width: 100%;
         height: 67px;
         display: flex;
         align-items: center;
     }
-    
+
+    .Integrations_cards {
+        max-width: 428px;
+    }
+
     .Integrations_title>strong {
         width: 128px;
         height: 17px;
@@ -107,5 +115,5 @@
         color: #1C1B1F;
         margin-left: 110px;
     }
-    
+
 }

@@ -267,7 +267,7 @@
 
 @media screen and (max-width: 550px) {
     .IntegrationsCard_main {
-        width: 388px;
+        max-width: 388px;
         height: 210px;
         border-radius: 44px;
         padding: 20px;
@@ -280,7 +280,7 @@
     }
 
     .IntegrationsCardName {
-        width: 290px;
+        max-width: 290px;
         height: 53px;
         display: flex;
         justify-content: center;
@@ -306,7 +306,7 @@
     }
 
     .IntegrateDetails {
-        width: 269px;
+        max-width: 269px;
         height: 102px;
         font-weight: 500;
         font-size: 20px;

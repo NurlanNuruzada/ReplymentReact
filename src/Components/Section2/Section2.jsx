@@ -22,6 +22,26 @@ export default function Section2() {
                     </div>
                 </div>
                 <div id={Styles.sectionOneHomePageResponsive}></div>
+
+
+                {/* Responsive Phone */}
+
+                <div className={Styles.ResponsivePhone}>
+                    <div className={Styles.ResponsivePhoneBetaVersion}>
+                        <div>
+                            <img src={warning} alt="" /><span style={{ marginLeft: '10px' }}>This is a beta version!</span>
+                        </div>
+                    </div>
+                    <div className={Styles.ResponsivePhoneEngage}>
+                        <div className={Styles.ResponsivePhoneEngageTop}>
+                            <h1>Engage with your website visitors using messaging applications.</h1>
+                            <p>Customize the chat widget to match your brand's colors and style. Additionally, set up a welcome message or chatbot to greet visitors and guide them to the right information.</p>
+                            <button className={Styles.Getbutton}>Get your free button</button>
+                            <img src={Screen} alt="" />
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     )
