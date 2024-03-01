@@ -34,12 +34,12 @@ export default function Header({ ShowButtons }) {
     const isSmallScreen = WindowSize.innerWidth <= "750" ? true : false
     return (
         <Grid templateColumns='repeat(12, 1fr)'  className={Styles.MainContainer}>
-            <GridItem colSpan={1}></GridItem>
+            <GridItem className={Styles.Spacer} colSpan={1}></GridItem>
             <GridItem colSpan={2} className={Styles.LogoContainer}>
                 <img src={MainLogo} alt="" />
                 <h1>Replyment</h1>
             </GridItem>
-            <GridItem colSpan={5}></GridItem>
+            <GridItem className={Styles.Spacer2} ></GridItem>
             {ShowButtons && !isSmallScreen ? (
                 <>
                     <GridItem colSpan={1}></GridItem>

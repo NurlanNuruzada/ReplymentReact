@@ -50,3 +50,43 @@
     color: #1C1B1F;
     background-color: #ffff !important;
 }
+@media screen and (max-width: 700px) {
+    .Spacer{
+        columns: 2;
+    }
+}
+@media screen and (max-width: 425px) {
+    .MainContainer {
+        grid-template-columns: repeat(6, 1fr) !important;
+    }
+    .Spacer{
+        columns: 1;
+    }
+    .Spacer2{
+        columns: 19 !important;
+    }
+    .LogoContainer{
+        columns: 2;
+        width: 52px;
+    }
+}
+@media screen and (max-width: 438px) {
+    .MainContainer {
+        grid-template-columns: repeat(6, 1fr) !important;
+    }
+    .Spacer{
+        columns: 1;
+    }
+    .Spacer2{
+        columns: 16;
+    }
+    .LogoContainer{
+        columns: 2;
+        width: 52px;
+    }
+}
+@media screen and (max-width: 361px) {
+    .Spacer2{
+        columns: 19 !important;
+    }
+}
