@@ -18,7 +18,7 @@ export default function SignInPage() {
                         <CustomFrom Title={"Email"} InnerText={"Enter your email adress"}></CustomFrom>
                         <CustomFrom Title={"Password"} InnerText={"Enter Password"}></CustomFrom>
                         <button className={Styles.LoginButton}>Log in</button>
-                    </div>
+                    </div> 
                 </GridItem>
                 <GridItem className={Styles.Spacer}  colSpan={1}></GridItem>
                 <GridItem  className={Styles.RightContainer} colSpan={6}>

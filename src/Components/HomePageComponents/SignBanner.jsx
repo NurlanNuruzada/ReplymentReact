@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Styles from './SignBanner.module.css'
 import BannerLogo from '../../Images/BannerLogo.png'
+import { useNavigate } from 'react-router'
 export default function SignBanner() {
+    const navigate = useNavigate();
     return (
         <>
             <div className={Styles.MainContainer}>
@@ -13,8 +15,8 @@ export default function SignBanner() {
                         </h1>
                     </div>
                     <div className={Styles.RightContainer}>
-                        <button className={Styles.LogInbutton}>Log In</button>
-                        <button className={Styles.Getbutton}>Get your button</button>
+                        <button onClick={()=>navigate("/beta/login")} className={Styles.LogInbutton}>Log In</button>
+                        <button onClick={()=>navigate("/beta/Register")} className={Styles.Getbutton}>Get your button</button>
                     </div>
                 </div>
             </div>

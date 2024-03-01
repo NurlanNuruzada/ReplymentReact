@@ -72,7 +72,7 @@
 }
 
 .RightContainer {
-    --s: -17px;
+    --s: 0px;
     transform-style: preserve-3d;
 
     &::after {
@@ -85,7 +85,8 @@
         border-radius: inherit;
         pointer-events: none;
         opacity: 0.35;
-        animation: 5s rotate infinite ;
+        transition: background-color 1s ease-in-out;
+        animation: 5s rotate linear infinite;
     }
 }
 
@@ -109,6 +110,13 @@
 }
 
 @media screen and (max-width: 700px) {
+    .LeftContainer {
+        grid-column: span 9 !important;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
     .MainHeader {
         font-family: Urbanist;
         font-size: 32px;
@@ -117,23 +125,19 @@
         letter-spacing: 0em;
         text-align: left;
     }
-    .Title{
-        padding: 0 0 50px 0;
-    }
+
     .RightContainer {
         display: none;
     }
 
-    .LeftContainer {
-        grid-column: span 9 !important;
-        padding: 15px;
-        width: 345px !important;
+
+    .MainContainer {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
     }
 
     .InputContainer {
-        width: 309px !important;
+        width: 0px;
     }
 
     .LoginButton {
@@ -161,4 +165,19 @@
         grid-template-columns: repeat(6, 1fr) !important;
     }
 
+}
+@media screen and (max-width: 700px) {
+    .LeftContainer {
+        width: 497px !important;
+    }
+}
+@media screen and (max-width: 630px) {
+    .LeftContainer {
+        width: 397px !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .LeftContainer {
+        width: 347px !important;
+    }
 }
