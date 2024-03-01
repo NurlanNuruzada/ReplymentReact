@@ -11,8 +11,6 @@ import {
     GridItem,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import LoginIcon from '@mui/icons-material/Login';
-import { SvgIcon } from '@mui/material'
 import { useEffect } from 'react'
 
 export default function Header({ ShowButtons }) {
