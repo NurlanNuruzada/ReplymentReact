@@ -1,7 +1,7 @@
 import React from 'react'
-import CustomizeImage from '../../../Images/Customize.svg'
+import CustomizeImage from '../../../../Images/Customize.svg'
 import Styles from './Section1.module.css'
-import WarningImage from '../../../Images/warning.svg'
+import WarningImage from '../../../../Images/warning.svg'
 import { Grid, GridItem } from '@chakra-ui/react'
 export default function Section1() {
   return (
