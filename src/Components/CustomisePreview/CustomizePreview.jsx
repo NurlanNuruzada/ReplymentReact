@@ -15,10 +15,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import WidgetsTwoToneIcon from '@mui/icons-material/WidgetsTwoTone';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
-import CrudForm from '../CrudForm/CrudForm';
-import SimpleHeader from '../Header/SimpleHeader';
-
-
+import SimpleHeader from '../../Components/Simpleheader/SimpleHeader';
 export default function CustomizePreview() {
   return (
     <>

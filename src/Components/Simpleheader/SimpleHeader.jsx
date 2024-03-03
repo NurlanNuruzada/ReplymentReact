@@ -1,6 +1,6 @@
 import React from 'react'
-import Styles from './SimpleHeader.module.css'
 import HeaderImage from './HeaderLogo.png'
+import Styles from './SimpleHeader.module.css'
 export default function SimpleHeader() {
     return (
         <div className={Styles.Container}>

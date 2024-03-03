@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react'
-import MainLogo from '../Images/BannerLogo.png'
+import React, { useEffect, useState } from 'react'
 import Styles from './Header.module.css'
+import MainLogo from '../../Images/BannerLogo.png'
 import {
     Menu,
     MenuButton,
@@ -11,7 +11,6 @@ import {
     GridItem,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { useEffect } from 'react'
 
 export default function Header({ ShowButtons }) {
     const [WindowSize, SetWindowSize] = useState(getWindowSize())
@@ -31,33 +30,31 @@ export default function Header({ ShowButtons }) {
     }, []);
     const isSmallScreen = WindowSize.innerWidth <= "750" ? true : false
     return (
-        <Grid templateColumns='repeat(12, 1fr)'  className={Styles.MainContainer}>
-            <GridItem className={Styles.Spacer} colSpan={1}></GridItem>
-            <GridItem colSpan={2} className={Styles.LogoContainer}>
+        <div  className={Styles.MainContainer}>
+            <div  className={Styles.LogoContainer}>
                 <img src={MainLogo} alt="" />
                 <h1>Replyment</h1>
-            </GridItem>
-            <GridItem className={Styles.Spacer2} ></GridItem>
+            </div>
             {ShowButtons && !isSmallScreen ? (
                 <>
-                    <GridItem colSpan={1}></GridItem>
-                    <GridItem colSpan={3} className={Styles.ButtonContainer}>
+                    <div className={Styles.ButtonContainer}>
                         <button className={Styles.LogInButton}>Log In</button>
                         <button className={Styles.RegisterButton}>Get your button</button>
-                    </GridItem>
-                    <GridItem colSpan={1}></GridItem>
+                    </div>
                 </>
             ) : null}
 
             {ShowButtons && isSmallScreen ? (
-                <GridItem>
-
-                    <Menu>
+                <div>
+                    <Menu >
                         <MenuButton
                             as={IconButton}
                             aria-label='Options'
                             icon={<HamburgerIcon />}
                             variant='outline'
+                            border={'none'}
+                            color={'white'}
+                            fontSize={26}
                         />
                         <MenuList>
                             <MenuItem>
@@ -68,8 +65,8 @@ export default function Header({ ShowButtons }) {
                             </MenuItem>
                         </MenuList>
                     </Menu>
-                </GridItem>
+                </div>
             ) : null}
-        </Grid>
+        </div>
     )
 }
