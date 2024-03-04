@@ -58,6 +58,7 @@
     flex-direction: column;
     padding: 40px;
     border-radius: 44px;
+    width: 501px;
     border: 2px;
     gap: 25px;
     border: 2px solid rgba(203, 206, 210, 1);
@@ -69,12 +70,14 @@
     }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1151px) {
     .PriceTitle {
         font-size: 25px;
         font-weight: 700;
     }
-
+    .MainContainer{
+        width: 100% ;
+    }
     .MainTitle {
         font-size: 35px;
         font-weight: 600;

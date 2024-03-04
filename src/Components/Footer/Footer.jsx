@@ -11,10 +11,12 @@ const Footer = () => {
             Replyment
           </h1>
         </div>
-        <h1 className={Styles.RightsTitle}>Copyright © 2024 Replyment. All rights reserved. </h1>
         <div className={Styles.RightContainer}>
-          <h1 className={Styles.RightsTitleRight}>Terms and Conditions</h1>
-          <h1 className={Styles.RightsTitleRight}>Privacy Policy</h1>
+          <h1 className={Styles.RightsTitle}>Copyright © 2024 Replyment. All rights reserved. </h1>
+          <div className={Styles.termsContainer}>
+            <h1 className={Styles.RightsTitleRight}>Terms and Conditions</h1>
+            <h1 className={Styles.terms}>Privacy Policy</h1>
+          </div>
         </div>
       </div>
     </>

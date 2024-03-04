@@ -13,7 +13,7 @@ export default function WhyReplyment() {
                 <LearnMoreCard Price={"Free"} Title={"Customizable Branding"}
                  Desc={"Allow users to customize the chat interface to match their brand, including colors, logos, and fonts, maintaining a consistent look and feel."}
                  ButtonInnerText={"Learn more"} />
-                <LearnMoreCard Price={"Free"} Title={"Customizable Branding"}
+                <LearnMoreCard Price={"Free"} Title={"Multi-Platform Integration"}
                  Desc={"Seamlessly connect with visitors on various messaging platforms such as WhatsApp, Facebook Messenger, Telegram  other."}
                  ButtonInnerText={"Learn more"} />
                 <LearnMoreCard Price={"Free"} Title={"Welcome Messages"}

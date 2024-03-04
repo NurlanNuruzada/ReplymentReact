@@ -17,13 +17,12 @@
 }
 .DownContainer{
     display: flex;
-    gap: 32px;
+    gap: 37px;
 }
-@media screen and (max-width: 1151px) {
+@media screen and (max-width: 1150px) {
     .DownContainer{
         flex-wrap: wrap;
     }
-
     .MainTitle{
         padding:  35px 0;
         font-size: 36px;
