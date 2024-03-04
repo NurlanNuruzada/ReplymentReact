@@ -1,0 +1,150 @@
+.Main {
+    width: 100%;
+    padding: 80px;
+    padding-top: 0;
+    background-color: white;
+}
+
+.ItsFree {
+    width: 100%;
+    height: max-content;
+    display: flex;
+}
+
+.ItsFree>div {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.ItsFree>div>strong {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 52.8px;
+}
+
+.ItsFree>div>button {
+    width: 211px;
+    height: 55px;
+    border-radius: 48px;
+    font-size: 16px;
+    border: none;
+    background-color: #000000;
+    color: white;
+}
+
+
+.Customize {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    border: 2px solid #CBCED2;
+    border-radius: 44px;
+    padding: 80px;
+}
+
+.Customize>h2 {
+    max-width: 100%;
+    font-size: 48px;
+    line-height: 52.8px;
+    font-weight: 600;
+    color: #1C1B1F;
+    padding-bottom: 40px;
+}
+
+.Customize>p {
+    max-width: 821px;
+    height: max-content;
+    font-size: 24px;
+    line-height: 26.4px;
+    font-weight: 500;
+    color: #1C1B1F;
+    opacity: 50%;
+    padding-bottom: 73px;
+}
+
+.Customize>button {
+    width: 202px;
+    height: 55px;
+    border-radius: 48px;
+    border: 2px solid #CBCED2;
+    font-size: 16px;
+    line-height: 17.6px;
+    font-weight: 600;
+    color: #1C1B1F;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 1051px) {
+    .Customize {
+        padding: 30px;
+    }
+
+    .Customize>h2 {
+        padding-bottom: 20px;
+
+    }
+
+    .Customize>p {
+        padding-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .Customize>button {
+        width: 202px;
+        height: 49px;
+        top: 245px;
+        left: 30px;
+        padding: 0px 29px 0px 27px;
+        border-radius: 40px;
+        border: 2px solid rgba(203, 206, 210, 1)
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .Customize>h2 {
+        font-size: 37px;
+        line-height: 33px;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    .Customize>h2 {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 33px;
+    }
+
+    .Customize>p {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 15px;
+    }
+
+    .Main {
+        padding: 20px 30px;
+    }
+
+    .ItsFree>div {
+        justify-content: center ;
+        padding: 35px 0;
+    }
+
+    .ItsFree>div>strong {
+        font-family: Urbanist;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+    .ItsFree>div>button {
+        display: none;
+    }
+}

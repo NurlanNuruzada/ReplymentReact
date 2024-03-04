@@ -1,7 +1,7 @@
 import React from 'react'
 import Styles from "./UnderConstruction.module.css"
 import CustomizePreview from '../../Components/CustomisePreview/CustomizePreview'
-import SimpleHeader from '../../Components/Header/SimpleHeader'
+import SimpleHeader from '../../Components/Simpleheader/SimpleHeader';
 
 export default function UnderConstuction() {
   return (

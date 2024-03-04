@@ -1,16 +1,15 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "../Footer/Footer";
-import { Banner } from "../Banner/Banner";
+import Header from '../Components/Header/Header'
 import Styles from "../Layouts/MainLayout.module.css"
-import Header from "../Header/Header";
 import { ChakraProvider } from '@chakra-ui/react'
-
+import Footer from '../Components/Footer/Footer'
 export function MainLayout() {
   return (
     <div className={Styles.Main}>
       <div className={Styles.Outlet}>
         <ChakraProvider >
+          <Header ShowButtons={true} />
         </ChakraProvider>
         <Outlet />
         <Footer />

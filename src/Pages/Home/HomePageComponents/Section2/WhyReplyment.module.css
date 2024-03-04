@@ -1,0 +1,40 @@
+.MainContainer{
+    background-color: white ;
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+}
+.MainTitle{
+    padding: 80px 0;
+    font-family: Urbanist;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 53px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+    word-break: break-all;
+}
+.DownContainer{
+    display: flex;
+    gap: 32px;
+}
+@media screen and (max-width: 1151px) {
+    .DownContainer{
+        flex-wrap: wrap;
+    }
+
+    .MainTitle{
+        padding:  35px 0;
+        font-size: 36px;
+    }
+  
+}
+@media screen and (max-width: 676px) {
+    .MainTitle{
+        font-size: 24px;
+    }
+    .MainContainer {
+        padding: 20px 30px;
+    }
+}

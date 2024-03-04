@@ -1,21 +1,20 @@
 import React from 'react'
-import SignBanner from '../../Components/HomePageComponents/SignBanner'
-import Section2 from '../../Components/Section2/Section2'
-import LastSection from '../../Components/LastSection/LastSection'
-import Whyreplyent from '../../Components/WhyReplyment/WhyReplyment'
-import FrequentlyAsked from '../../Components/FrequentlyQuestions/Questions'
-import Integrations from '../../Components/Integrations/Integrations'
-import './Home.scss'
+import LastSection from '../Home/HomePageComponents/Section4/LastSection'
+import Styles from './Home.module.scss'
+import Section1 from './HomePageComponents/Section1/Section1'
+import WhyReplyment from './HomePageComponents/Section2/WhyReplyment'
+import Section3 from './HomePageComponents/Section3/Section3'
+import Questions from './HomePageComponents/FrequentlyQuestions/Questions'
 
 
 export default function Home() {
   return (
-    <>  
-      <div id="Home">
-        <SignBanner />
-        <Whyreplyent />
-        <Integrations />
-        <FrequentlyAsked />
+    <>
+      <div className={Styles.MainContainer}>
+        <Section1 />
+        <WhyReplyment />
+        <Section3  />
+        <Questions />
         <LastSection />
       </div>
     </>

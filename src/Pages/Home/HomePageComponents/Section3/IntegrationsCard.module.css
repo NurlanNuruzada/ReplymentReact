@@ -1,0 +1,100 @@
+.MainContainer {
+    width: 501px;
+    height: (255px);
+    padding: 30px;
+    border-radius: 44px;
+    gap: 25px;
+    background-color: linear-gradient(104.52deg, rgba(255, 255, 255, 0.53) 0%, rgba(255, 255, 255, 0.31) 100%);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.Down {
+    display: flex;
+    align-items: center;
+}
+
+.Desc {
+    padding: 15.5px 20px !important;
+}
+
+.Up {
+    display: flex;
+    align-items: center;
+    height: 30%;
+
+}
+
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15.5px;
+}
+
+.Icon {
+    width: 44.17px;
+    height: 39.75px;
+}
+
+.MainTitle {
+    padding: 0px 20px !important;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 0em;
+    color: rgba(28, 27, 31, 1);
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+}
+
+@media screen and (max-width: 1151px) {
+    .MainContainer {
+        width: 100% ;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .MainContainer {
+        width: 100% !important;
+        height: max-content;
+        padding: 20px 30px;
+        border-radius: 30px;
+        border: 1px;
+        box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(104.52deg, rgba(255, 255, 255, 0.53) 0%, rgba(255, 255, 255, 0.31) 100%);
+    }
+
+    .Desc {
+        padding: 0 20px !important;
+    }
+
+    .Up {
+        display: flex;
+        align-items: center;
+        height: 30%;
+
+    }
+
+    .MainContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: 100% !important;
+    }
+
+    .Icon {
+        width: 29.25px;
+        height: 32.5px;
+    }
+
+    .MainTitle {
+        font-family: Urbanist;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}

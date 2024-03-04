@@ -1,0 +1,144 @@
+.PriceTitle {
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    color: rgba(28, 27, 31, 0.5);
+}
+
+.MainTitle {
+    font-family: Urbanist;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+    margin-bottom: auto;
+}
+
+.Desc {
+    max-height: 130px;
+    margin-top: auto;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 0.5);
+}
+
+.Button {
+    align-self: flex-start;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+    width: max-content;
+    height: (55px);
+    padding: 22px 28px 22px 28px;
+    border-radius: 48px;
+    border: 2px;
+    gap: 10px;
+}
+
+.MainContainer button {
+    border: 2px solid rgba(203, 206, 210, 1);
+}
+
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 44px;
+    width: 501px;
+    border: 2px;
+    gap: 25px;
+    border: 2px solid rgba(203, 206, 210, 1);
+}
+
+@media screen and (max-width: 1530px) {
+    .Desc {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 1151px) {
+    .PriceTitle {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .MainContainer{
+        width: 100% ;
+    }
+    .MainTitle {
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+
+    .Desc {
+        height: max-content;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .PriceTitle {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .MainTitle {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+
+    .Desc {
+        height: max-content;
+        font-size: 16px;
+        line-height: 17.6px;
+    }
+}
+
+@media screen and (max-width: 477px) {
+    .PriceTitle {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .MainContainer {
+        width: 100%;
+        height: max-content;
+        top: 791px;
+        gap: 20px;
+        left: 20px;
+        padding: 25px;
+        border-radius: 30px;
+        border: 2px solid rgba(203, 206, 210, 1);
+    }
+    .MainTitle{
+        line-height: 24px;
+    }
+    .Button {
+        height: (55px);
+        top: 165px;
+        left: 30px;
+        padding: 15px 22px ;
+        border-radius: 48px;
+        border: 1px;
+        gap: 10px;
+
+    }
+}
