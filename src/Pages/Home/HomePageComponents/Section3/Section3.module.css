@@ -37,3 +37,8 @@
         padding: 20px 30px;
     }
 }
+@media screen and (min-width: 1750px) {
+    .DownContainer{
+        justify-content: space-between;
+    }
+}
