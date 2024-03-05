@@ -1,0 +1,16 @@
+.ContentContainer {
+    padding: 20px 80px;
+    display: flex;
+    gap: 32px;
+}
+@media screen and (max-width:1024px) {
+    .ContentContainer {
+       display: none;
+    }
+}
+
+.MenuContainer {
+    width: 368px;
+    height: 300px;
+
+}
