@@ -12,6 +12,9 @@ import SignUpPage from "../Pages/SignUpPage/SignUpPage";
 import MenuLayout from "../Layouts/MenuLayout/MenuLayout";
 import Customize from '../Pages/Customize/Customize'
 import Trigger from "../Pages/Trigger/Trigger";
+import Account from '../Pages/Account/Account'
+import Widgets from '../Pages/Widgets/Widgets'
+
 export default function Routes() {
   let routes = [
     {
@@ -49,6 +52,14 @@ export default function Routes() {
         {
           path: "/beta/trigger",
           element: <Trigger />,
+        },
+        {
+          path: "/beta/widgets",
+          element: <Widgets />,
+        },
+        {
+          path: "/beta/account",
+          element: <Account />,
         },
       ],
     },
