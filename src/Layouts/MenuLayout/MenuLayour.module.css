@@ -3,14 +3,18 @@
     display: flex;
     gap: 32px;
 }
-@media screen and (max-width:1024px) {
-    .ContentContainer {
+@media screen and (max-width:1051px) {
+    .MenuContainer {
        display: none;
+    }
+}
+@media screen and (max-width:676px) {
+    .ContentContainer {
+        padding: 20px 30px;
     }
 }
 
 .MenuContainer {
     width: 368px;
     height: 300px;
-
 }

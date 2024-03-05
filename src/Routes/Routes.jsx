@@ -11,6 +11,7 @@ import SignInLayout from "../Layouts/SignInLayout/SignInLayout";
 import SignUpPage from "../Pages/SignUpPage/SignUpPage";
 import MenuLayout from "../Layouts/MenuLayout/MenuLayout";
 import Customize from '../Pages/Customize/Customize'
+import Trigger from "../Pages/Trigger/Trigger";
 export default function Routes() {
   let routes = [
     {
@@ -44,6 +45,10 @@ export default function Routes() {
         {
           path: "/beta/customize",
           element: <Customize />,
+        },
+        {
+          path: "/beta/trigger",
+          element: <Trigger />,
         },
       ],
     },
