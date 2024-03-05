@@ -9,7 +9,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import SignInPage from "../Pages/SignInPage/SignInPage";
 import SignInLayout from "../Layouts/SignInLayout/SignInLayout";
 import SignUpPage from "../Pages/SignUpPage/SignUpPage";
-
+import MenuLayout from "../Layouts/MenuLayout/MenuLayout";
+import Customize from '../Pages/Customize/Customize'
 export default function Routes() {
   let routes = [
     {
@@ -33,6 +34,16 @@ export default function Routes() {
         {
           path: "/beta/Register",
           element:<SignUpPage />
+        },
+      ],
+    },
+    {
+      path: "/beta",
+      element: <MenuLayout padding={'padding: 30px 80px 30px 80px'} height={"107px"} border={"1px solid #CBCED2"}  titleColor={'black'} position="initial" />,
+      children: [
+        {
+          path: "/beta/customize",
+          element: <Customize />,
         },
       ],
     },

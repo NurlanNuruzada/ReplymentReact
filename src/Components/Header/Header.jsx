@@ -12,9 +12,10 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 
-export default function Header({ ShowButtons }) {
+export default function Header({ ShowButtons, Position ,TitleColor,Border,Height,Padding}) {
     const [WindowSize, SetWindowSize] = useState(getWindowSize())
-
+    const [DisplayPosition, SetDisplayPosition] = useState(Position)
+    
     function getWindowSize() {
         const { innerWidth, innerHeight } = window;
         return { innerWidth, innerHeight };
@@ -29,11 +30,12 @@ export default function Header({ ShowButtons }) {
         };
     }, []);
     const isSmallScreen = WindowSize.innerWidth <= "750" ? true : false
+
     return (
-        <div  className={Styles.MainContainer}>
-            <div  className={Styles.LogoContainer}>
+        <div style={{ position: DisplayPosition ,border:Border,height:Height,padding:Padding}} className={Styles.MainContainer}>
+            <div className={Styles.LogoContainer}>
                 <img src={MainLogo} alt="" />
-                <h1>Replyment</h1>
+                <h1 style={{color: TitleColor}}>Replyment</h1>
             </div>
             {ShowButtons && !isSmallScreen ? (
                 <>
