@@ -10,11 +10,17 @@
     display: flex;
     align-items: center;
     color: #E1E0E4;
-    transition: background-color 0.3s ease-in-out;
     cursor: pointer;
     border-radius: 20px;
+    user-select: none;
+    outline: none;
 }
-
+.Button:active {
+    background-color: transparent;
+}
+.Button:focus {
+    background-color: transparent;
+}
 .Img {
     width: 21.62px;
     height: 21.62px;

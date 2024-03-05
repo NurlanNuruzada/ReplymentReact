@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Styles from './MenuLayour.module.css';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate } from 'react-router';
 import { ChakraProvider } from '@chakra-ui/react';
 import Header from '../../Components/Header/Header';
 import MenuButton from '../../Components/Buttons/MenuButtonCustomized/MenuButton';
@@ -16,12 +16,28 @@ import SubsIconHigh from '../../Images/paymentsHigh.svg';
 import AccountIconHigh from '../../Images/accontHigh.svg';
 
 export default function MenuLayout({ position, titleColor, border, height, padding }) {
-    const [selectedButton, setSelectedButton] = useState(null);
+    const [selectedButton, setSelectedButton] = useState('');
+
+    useEffect(() => {
+        const storedButton = localStorage.getItem('selectedButton');
+        if (storedButton) {
+            setSelectedButton(storedButton);
+        }
+    }, []);
 
     const handleButtonClick = (buttonName) => {
         setSelectedButton(buttonName);
+        localStorage.setItem('selectedButton', buttonName);
+        handleNavigate(buttonName.toLowerCase())
     };
+
+    const navigate = useNavigate();
+    const handleNavigate = (link) => { 
+        navigate(link);
+    };
+
     const MenuSections = ["Customize", "Trigger", "Widgets", "Subscription", "Account"];
+
     return (
         <div className={Styles.Main}>
             <div className={Styles.Outlet}>
@@ -30,7 +46,7 @@ export default function MenuLayout({ position, titleColor, border, height, paddi
                 </ChakraProvider>
                 <div className={Styles.ContentContainer}>
                     <div className={Styles.MenuContainer}>
-                        <MenuButton HighIcon={CustomizeIconHigh} className={Styles.Button}
+                        <MenuButton  HighIcon={CustomizeIconHigh} className={Styles.Button}
                             isSelected={selectedButton === 'Customize'} highColor={"rgba(28, 27, 31, 1)"} Title={"Customize"} Icon={CustomizeIcon} onClick={() => handleButtonClick('Customize')} />
                         <MenuButton HighIcon={TriggerIconHigh} className={Styles.Button}
                             isSelected={selectedButton === 'Trigger'} highColor={"rgba(28, 27, 31, 1)"} Title={"Trigger"} Icon={TriggerIcon} onClick={() => handleButtonClick('Trigger')} />
