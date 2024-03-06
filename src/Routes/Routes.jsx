@@ -48,7 +48,7 @@ export default function Routes() {
       children: [
         {
           path: "/beta/customize",
-          element: <Customize />,
+          element: <ChakraProvider><Customize /></ChakraProvider>,
         },
         {
           path: "/beta/trigger",

@@ -9,6 +9,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px 0;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 .Title {
@@ -71,4 +73,52 @@
 .PlusIconLarge {
     width: 23.33px;
     height: 23.33px;
+}
+
+.DomainButton {
+    padding: 19.5px 22px;
+    border-radius: 106px;
+    gap: 12px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    color: rgba(28, 27, 31, 0.5);
+}
+
+.TryPremiumButton {
+    padding: 19.5px 22px;
+    border-radius: 106px;
+    border: 1px;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(238, 190, 65, 1);
+    border: 1px solid rgba(238, 190, 65, 0.4);
+    background: rgba(238, 190, 65, 0.1);
+}
+
+.Banner{
+    font-family: Urbanist;
+font-size: 24px;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(28, 27, 31, 1);
+padding: 25px 0;
+
+}
+.ButtonSection{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
