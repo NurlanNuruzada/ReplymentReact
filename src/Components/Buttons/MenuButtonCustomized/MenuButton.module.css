@@ -15,6 +15,9 @@
     user-select: none;
     outline: none;
 }
+.Button:hover{
+    background: rgba(201, 217, 255, 0.5);
+}
 .Button:active {
     background-color: transparent;
 }

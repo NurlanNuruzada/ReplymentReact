@@ -14,6 +14,7 @@ import Customize from '../Pages/Customize/Customize'
 import Trigger from "../Pages/Trigger/Trigger";
 import Account from '../Pages/Account/Account'
 import Widgets from '../Pages/Widgets/Widgets'
+import Subscription from '../Pages/Subscription/subscription'
 
 export default function Routes() {
   let routes = [
@@ -47,7 +48,7 @@ export default function Routes() {
       children: [
         {
           path: "/beta/customize",
-          element: <Customize />,
+          element: <ChakraProvider><Customize /></ChakraProvider>,
         },
         {
           path: "/beta/trigger",
@@ -60,6 +61,10 @@ export default function Routes() {
         {
           path: "/beta/account",
           element: <Account />,
+        },
+        {
+          path: "/beta/Subscription",
+          element: <Subscription />,
         },
       ],
     },

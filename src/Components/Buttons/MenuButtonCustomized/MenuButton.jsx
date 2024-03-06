@@ -12,7 +12,7 @@ export default function MenuButton({ Title, Icon, HighIcon, isSelected, highColo
                 <div className={Styles.ImgContainer}>
                     <img className={Styles.Img} src={isSelected ? HighIcon : Icon} alt="" />
                 </div>
-                <p style={{ color: isSelected ? highColor : "" }} className={Styles.text}>
+                <p style={{ color: isSelected ? highColor : "" ,fontWeight : isSelected ? 600 : 500}} className={Styles.text}>
                     {Title}
                 </p>
             </button>

@@ -1,5 +1,183 @@
-.Main{
-    border: 2px solid black;
+.MainContainer {
     width: 100%;
     height: max-content;
+}
+
+.Header {
+    border-bottom: 1px solid rgba(203, 206, 210, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.Title {
+    font-family: Urbanist;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+}
+
+.AddDomainButton {
+    width: (189px);
+    height: (58px);
+    padding: 19.5px;
+    border-radius: 252px;
+    border: 1px;
+    gap: 16px;
+    border: 1px solid rgba(203, 206, 210, 1);
+}
+
+.PlusIcon {
+    width: 11.08px;
+    height: 11.08px;
+    top: 23.46px;
+    left: 23.46px;
+}
+
+.AddDomainButton {
+    display: flex;
+    gap: 19.6px;
+    font-family: Urbanist;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(28, 27, 31, 1);
+    background-color: white;
+}
+
+.AddDomainButtonLarge {
+    margin-top: 25px;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+    display: flex;
+    align-items: center;
+    background: rgba(203, 206, 210, 0.2);
+    border-radius: 30px;
+    gap: 25px;
+    padding: 38px 25px;
+}
+
+.PlusIconLarge {
+    width: 23.33px;
+    height: 23.33px;
+}
+
+.DomainButton {
+    padding: 19.5px 22px;
+    border-radius: 106px;
+    gap: 12px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    color: rgba(28, 27, 31, 0.5);
+}
+
+.TryPremiumButton {
+    padding: 19.5px 22px;
+    border-radius: 106px;
+    border: 1px;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(238, 190, 65, 1);
+    border: 1px solid rgba(238, 190, 65, 0.4);
+    background: rgba(238, 190, 65, 0.1);
+}
+
+.Banner {
+    font-family: Urbanist;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+    padding: 25px 0;
+
+}
+
+.ButtonSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.AccodionContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ArrowIcon {
+    width: max-content;
+}
+
+.AccodionContainer img {
+    width: 23.89px;
+    height: 24px;
+}
+
+.AccodionTitle {
+    padding: 5px;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: rgba(28, 27, 31, 1);
+}
+
+.AcordionButton {
+    padding: 30px !important;
+}
+
+.AccordionBtn {
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 20px;
+    border-radius: 156px;
+    gap: 10px;
+
+}
+
+.AccordionBtnContainer {
+    display: flex;
+    gap: 15px;
+    border-radius: 156px;
+    border: 1px;
+    gap: 10px;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+}
+
+.AccordionBtnContainer img {
+    width: 24px;
+    height: 24px;
+
 }
