@@ -112,21 +112,28 @@ export default function Customize() {
               <CustomizeButton Style={'Mainbutton'} Icon={GoogleMaps} Text={"GoogleMaps"} />
             </div>
             <div>
-              {/* <Accordion  border={'1px solid rgba(37, 211, 102, 1)'} allowToggle>
-                <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <Box as="span" flex='1' textAlign='left'>
-                        Section 1 title
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    <p>link</p>
+              <Accordion maxW={501} borderRadius={30} border={'1px solid rgba(203, 206, 210, 1)'} allowToggle>
+                <AccordionItem border={"none"}>
+                  <AccordionButton className={Styles.AcordionButton} _hover={{ bg: 'none' }} >
+                    <Box as="span" flex='1' textAlign='left'>
+                      <div className={Styles.AccodionContainer} >
+                        <img src={Whatsapp} alt="" />
+                        <p className={Styles.AccodionTitle}>
+                          Whatsapp
+                        </p>
+                      </div>
+                    </Box>
+                    <AccordionIcon color={"rgba(37, 211, 102, 1)"} className={Styles.ArrowIcon} fontSize={34} />
+                  </AccordionButton>
+                  <AccordionPanel border={"none"}>
+                    <Box  className={Styles.AccordionBtnContainer}>
+                      <Button p={30} bg={'transparent'} className={Styles.AccordionBtn}><img src={CustomLink} alt="" /> add link</Button>
+                      <Button p={30} bg={'transparent'} className={Styles.AccordionBtn}><img src={CustomLink} alt="" />  Add agent</Button>
+                    </Box>
                   </AccordionPanel>
                 </AccordionItem>
-              </Accordion> */}
+              </Accordion>
+
             </div>
           </div>
           : ""}
