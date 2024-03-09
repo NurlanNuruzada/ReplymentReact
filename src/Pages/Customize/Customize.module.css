@@ -124,60 +124,21 @@
     gap: 10px;
 }
 
-.AccodionContainer {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+
+.SeclectedButtons{
+    height: max-content;
+    max-width: 1035px;
+    gap: 32px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 25px;
 }
-
-.ArrowIcon {
-    width: max-content;
-}
-
-.AccodionContainer img {
-    width: 23.89px;
-    height: 24px;
-}
-
-.AccodionTitle {
-    padding: 5px;
-    font-family: Urbanist;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: 0em;
-    color: rgba(28, 27, 31, 1);
-}
-
-.AcordionButton {
-    padding: 30px !important;
-}
-
-.AccordionBtn {
-    border: 1px solid rgba(203, 206, 210, 1);
-    padding: 20px;
-    border-radius: 156px;
-    gap: 10px;
-
-}
-
-.AccordionBtnContainer {
-    display: flex;
-    gap: 15px;
-    border-radius: 156px;
-    border: 1px;
-    gap: 10px;
-    font-family: Urbanist;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: rgba(28, 27, 31, 1);
-}
-
-.AccordionBtnContainer img {
-    width: 24px;
-    height: 24px;
-
+@media screen and (max-width:950px) {
+    .SeclectedButtons{
+        grid-template-columns: 100%;
+        width: 100% !important;
+    }
+    .SeclectedButtons > div {
+        width: 100% !important;
+    }
 }

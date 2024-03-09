@@ -1,0 +1,17 @@
+{
+    "buttons": [
+      {
+        "name": "Button 1",
+        "icon": "src/Images/3p.png"
+      },
+      {
+        "name": "Button 2",
+        "icon": "src/Images/3p.png"
+      },
+      {
+        "name": "Button 3",
+        "icon": "src/Images/3p.png"
+      }
+    ]
+  }
+  

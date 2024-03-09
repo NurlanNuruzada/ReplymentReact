@@ -13,6 +13,12 @@
     flex-direction: column;
 }
 
+@media screen and (max-width:380px) {
+    .PreviewContainer {
+        padding: 8px 23px !important;
+    }
+}
+
 .PreviewContainer {
     background-color: black;
     border: 7px #4D4D4D solid;

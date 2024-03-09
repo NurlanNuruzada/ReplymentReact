@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Styles from './Customize.module.css'
 import PlusImage from '../../Images/add.svg'
 import {
@@ -14,36 +14,28 @@ import {
   FormControl,
   Input,
   FormLabel,
-  Box,
 } from '@chakra-ui/react'
 import arrowIcon from '../../Images/arrow_back_ios_new.svg'
 import CustomizeButton from '../../Components/Buttons/CustomomizeButtons/CustomizeButton'
-import Whatsapp from '../../Images/IconImage/whatsapp.svg'
-import youtube from '../../Images/IconImage/youtube.svg'
-import Mesenger from '../../Images/IconImage/Mesenger.svg'
-import SnapChat from '../../Images/IconImage/Snapchat.svg'
-import Teleqram from '../../Images/IconImage/Teleqram.svg'
-import CustomLink from '../../Images/IconImage/link.svg'
-import İnstagram from '../../Images/IconImage/instagram.png'
-import Skype from '../../Images/IconImage/Group.svg'
-import linkein from '../../Images/IconImage/Linkein.svg'
-import Twitter from '../../Images/IconImage/Twitter.svg'
-import Waze from '../../Images/IconImage/waze_logo_icon_249220 1.svg'
-import Tiktok from '../../Images/IconImage/tikTok.svg'
-import discord from '../../Images/IconImage/discord.svg'
-import Call from '../../Images/IconImage/call (1).svg'
-import GoogleMaps from '../../Images/IconImage/GoogleMaps-Icon-alone-1 1.svg'
-import CheckImage from '../../Images/check.svg'
+import Whatsapp from '../../Images/IconImage/whatsapp.svg';
+import Youtube from '../../Images/IconImage/youtube.svg';
+import Messenger from '../../Images/IconImage/Mesenger.svg';
+import Snapchat from '../../Images/IconImage/Snapchat.svg';
+import Telegram from '../../Images/IconImage/Teleqram.svg';
+import CustomLink from '../../Images/IconImage/link.svg';
+import Instagram from '../../Images/IconImage/instagram.png';
+import Skype from '../../Images/IconImage/Group.svg';
+import Linkedin from '../../Images/IconImage/Linkein.svg';
+import Twitter from '../../Images/IconImage/Twitter.svg';
+import Waze from '../../Images/IconImage/waze_logo_icon_249220 1.svg';
+import Tiktok from '../../Images/IconImage/tikTok.svg';
+import Discord from '../../Images/IconImage/discord.svg';
+import Call from '../../Images/IconImage/call (1).svg';
+import GoogleMaps from '../../Images/IconImage/GoogleMaps-Icon-alone-1 1.svg';
+import CheckImage from '../../Images/check.svg';
 import AddLinkSection from '../../Components/AddlinkSection/AddLinkSection'
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from '@chakra-ui/react'
 export default function Customize() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const {isOpen, onOpen, onClose } = useDisclosure()
   const [newDomain, setNewDomain] = useState('')
   const [ShowDomain, setShowDomain] = useState('')
   const [display, setdisplay] = useState(false)
@@ -62,10 +54,43 @@ export default function Customize() {
 
   const handleSave = () => {
     HandleDisplay();
-
     onClose();
   };
+  const [SelectedButtons, setSelectedButtons] = useState([]);
 
+  const handleButtonClick = (button) => {
+    const isButtonExists = SelectedButtons.some((selectedButton) => selectedButton.name === button.name);
+  
+    if (isButtonExists) {
+      const updatedButtons = SelectedButtons.filter((selectedButton) => selectedButton.name !== button.name);
+      setSelectedButtons(updatedButtons);
+    } else {
+      setSelectedButtons(prevButtons => [...prevButtons, button]);
+    }
+  };
+  useEffect(() => {
+    console.log(SelectedButtons);
+  }, [SelectedButtons]);
+  
+  const Buttonlist = {
+    buttons: [
+      { id:1, name: "Whatsapp", icon: Whatsapp },
+      { id:2, name: "Youtube", icon: Youtube },
+      { id:3, name: "Messenger", icon: Messenger },
+      { id:4, name: "Snapchat", icon: Snapchat },
+      { id:5, name: "Telegram", icon: Telegram },
+      { id:6, name: "Custom Link", icon: CustomLink },
+      { id:7, name: "Instagram", icon: Instagram },
+      { id:8, name: "Skype", icon: Skype },
+      { id:9, name: "Linkedin", icon: Linkedin },
+      { id:10, name: "Twitter", icon: Twitter },
+      { id:11, name: "Waze", icon: Waze },
+      { id:12, name: "Tiktok", icon: Tiktok },
+      { id:13, name: "Discord", icon: Discord },
+      { id:14, name: "Call", icon: Call },
+      { id:15, name: "Google Maps", icon: GoogleMaps }
+    ]
+  };
   return (
     <div className={Styles.MainContainer}>
       <div className={Styles.Header}>
@@ -95,45 +120,18 @@ export default function Customize() {
               <h1>Active messaging apps</h1>
             </div>
             <div className={Styles.ButtonSection}>
-              <CustomizeButton Style={'GreenButton'} Icon={Whatsapp} Text={"Whatsapp"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={youtube} Text={"YouTube"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={Mesenger} Text={"Mesenger"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={Teleqram} Text={"Teleqram"} />
-              <CustomizeButton Style={'GreenButton'} Icon={SnapChat} Text={"SnapChat"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={CustomLink} Text={"CustomLink"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={İnstagram} Text={"İnstagram"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={Skype} Text={"Skype"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={linkein} Text={"linkein"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={Twitter} Text={"Twitter"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={Waze} Text={"Waze"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={Tiktok} Text={"Tik Tok"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={discord} Text={"Discord"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={Call} Text={"Call"} />
-              <CustomizeButton Style={'Mainbutton'} Icon={GoogleMaps} Text={"GoogleMaps"} />
+              {Buttonlist?.buttons.map((button, index) => (
+                <div onClick={() => handleButtonClick(button)} key={index}>
+                  <CustomizeButton   key={index} Style={SelectedButtons.some(selectedButton => selectedButton.name === button.name) ? 'GreenButton' : 'Mainbutton'} Icon={button.icon} Text={button.name} />
+                </div>
+              ))}
             </div>
-            <div>
-              <Accordion maxW={501} borderRadius={30} border={'1px solid rgba(203, 206, 210, 1)'} allowToggle>
-                <AccordionItem border={"none"}>
-                  <AccordionButton className={Styles.AcordionButton} _hover={{ bg: 'none' }} >
-                    <Box as="span" flex='1' textAlign='left'>
-                      <div className={Styles.AccodionContainer} >
-                        <img src={Whatsapp} alt="" />
-                        <p className={Styles.AccodionTitle}>
-                          Whatsapp
-                        </p>
-                      </div>
-                    </Box>
-                    <AccordionIcon color={"rgba(37, 211, 102, 1)"} className={Styles.ArrowIcon} fontSize={34} />
-                  </AccordionButton>
-                  <AccordionPanel border={"none"}>
-                    <Box  className={Styles.AccordionBtnContainer}>
-                      <Button p={30} bg={'transparent'} className={Styles.AccordionBtn}><img src={CustomLink} alt="" /> add link</Button>
-                      <Button p={30} bg={'transparent'} className={Styles.AccordionBtn}><img src={CustomLink} alt="" />  Add agent</Button>
-                    </Box>
-                  </AccordionPanel>
-                </AccordionItem>
-              </Accordion>
-
+            <div className={Styles.SeclectedButtons}>
+              {SelectedButtons.map((button, index) => (
+                <div key={index}>
+                  <AddLinkSection IsSelected={true} Icon={button.icon} Text={button.name} />
+                </div>
+              ))}
             </div>
           </div>
           : ""}
