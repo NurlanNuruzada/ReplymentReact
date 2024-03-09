@@ -63,10 +63,93 @@
     .AccordionBtnContainer {
         width: 100%;
     }
-    .Main{
+
+    .Main {
         width: 100% !important;
     }
+
     .AccordionBtn {
         width: 100% !important;
     }
+}
+
+.DeleteButton {
+    padding: 20px !important;
+    border-radius: 156px !important;
+    gap: 10px !important;
+    border: 1px solid rgba(255, 103, 103, 1) !important;
+    font-family: Urbanist;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 103, 103, 1) !important;
+    width: 148px !important;
+    height: 64px !important;
+    background-color: transparent !important;
+    margin-top: 30px;
+}
+
+.DeleteButton:hover {
+    background-color: transparent !important;
+}
+
+.CancelButton {
+    padding: 20px !important;
+    border-radius: 156px !important;
+    gap: 10px !important;
+    border: 1px solid rgba(203, 206, 210, 1);
+    font-family: Urbanist;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 103, 103, 1) !important;
+    width: 148px !important;
+    height: 64px !important;
+    background-color: transparent !important;
+    margin-top: 30px;
+}
+
+.deleteIcon {
+    width: 16px;
+    height: 18px;
+}
+
+.FromInput {
+    max-width: (441px);
+    height: 61px !important;
+    padding: 25px;
+    border-radius: 18px !important;
+    border: 1px;
+    gap: 10px;
+    border: 1px solid rgba(203, 206, 210, 1);
+}
+
+.DoneButton {
+    width: 20px;
+    height: 20px;
+    padding-bottom: 2px;
+}
+.DoneButtonContainer{
+    display: flex;
+    align-items: center;
+    padding: 20px !important;
+    border-radius: 156px !important;
+    gap: 10px !important;
+    border: 1px solid rgba(203, 206, 210, 1);
+    color: rgba(28, 27, 31, 1) !important;
+    font-family: Urbanist;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+    width: 148px !important;
+    height: 64px !important;
+    background-color: transparent !important;
+    margin-top: 30px;
 }

@@ -14,7 +14,6 @@ import {
   FormControl,
   Input,
   FormLabel,
-  Box,
 } from '@chakra-ui/react'
 import arrowIcon from '../../Images/arrow_back_ios_new.svg'
 import CustomizeButton from '../../Components/Buttons/CustomomizeButtons/CustomizeButton'
@@ -35,9 +34,8 @@ import Call from '../../Images/IconImage/call (1).svg';
 import GoogleMaps from '../../Images/IconImage/GoogleMaps-Icon-alone-1 1.svg';
 import CheckImage from '../../Images/check.svg';
 import AddLinkSection from '../../Components/AddlinkSection/AddLinkSection'
-import Buttonlist2 from '../../Data/ButtonList.json'
 export default function Customize() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const {isOpen, onOpen, onClose } = useDisclosure()
   const [newDomain, setNewDomain] = useState('')
   const [ShowDomain, setShowDomain] = useState('')
   const [display, setdisplay] = useState(false)
@@ -93,7 +91,6 @@ export default function Customize() {
       { id:15, name: "Google Maps", icon: GoogleMaps }
     ]
   };
-  const index = 0
   return (
     <div className={Styles.MainContainer}>
       <div className={Styles.Header}>
@@ -117,7 +114,7 @@ export default function Customize() {
         {!display ?
           <button onClick={onOpen} className={Styles.AddDomainButtonLarge}><img className={Styles.PlusIconLarge} src={PlusImage} alt="" />Add new domain</button>
           : ""}
-        {true ?
+        {display ?
           <div className={Styles.MainContentContainer}>
             <div className={Styles.Banner}>
               <h1>Active messaging apps</h1>
