@@ -96,6 +96,7 @@ const handleAgentClick = index => {
 const handleDeleteAgent = () => {
   if (selectedAgentIndex !== null) {
     const updatedAgents = [...agentNameDisplay];
+    updatedAgents.splice(selectedAgentIndex, 1);
     setAgentNameDisplay(updatedAgents);
     setInputs({
       agentName: '',
@@ -105,7 +106,6 @@ const handleDeleteAgent = () => {
     setSelectedAgentIndex(null);
   }
 };
-
   return (
     <Accordion className={Styles.Main} h={'max-content'} borderRadius={30} border={'1px solid rgba(203, 206, 210, 1)'} allowToggle>
       <AccordionItem border={"none"}>
