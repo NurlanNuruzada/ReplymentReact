@@ -25,18 +25,19 @@ export default function AddLinkSection({ Icon, Text }) {
   const [isWhatsapp, setIsWhatsapp] = useState(false);
   const [AddLink, setAddLink] = useState(false);
   const [AddAgent, setAddAgent] = useState(false);
+  const [agentNameDisplay, setAgentNameDisplay] = useState([]);
+  const [selectedAgentIndex, setSelectedAgentIndex] = useState(null);
+  const [inputs, setInputs] = useState({
+    agentName: '',
+    agentPosition: '',
+    numberOrLink: ''
+  });
 
   useEffect(() => {
     if (Text === "Whatsapp") {
       setIsWhatsapp(true);
     }
   }, [Text]);
-
-  const [inputs, setInputs] = useState({
-    agentName: '',
-    agentPosition: '',
-    numberOrLink: ''
-  });
 
   const handleInputChange = (e, fieldName) => {
     setInputs({
@@ -50,18 +51,60 @@ export default function AddLinkSection({ Icon, Text }) {
   };
 
   const handleAddAgent = () => {
-    setAddAgent(!AddLink); // Note: should be setAddAgent(!AddAgent)
+    setAddAgent(!AddAgent);
   };
 
-  const handleDone = () => {
-    console.log("Inputs:", inputs);
-    setAddAgent(!AddLink);
+const handleDone = () => {
+  if (inputs.agentName.trim() !== '') {
+    if (selectedAgentIndex !== null) {
+      const updatedAgents = [...agentNameDisplay];
+      updatedAgents[selectedAgentIndex] = {
+        name: inputs.agentName,
+        position: inputs.agentPosition,
+        numberOrLink: inputs.numberOrLink
+      };
+      setAgentNameDisplay(updatedAgents);
+    } else {
+      setAgentNameDisplay(prevAgents => [
+        ...prevAgents,
+        {
+          name: inputs.agentName,
+          position: inputs.agentPosition,
+          numberOrLink: inputs.numberOrLink
+        }
+      ]);
+    }
+  }
+  setInputs({
+    agentName: '',
+    agentPosition: '',
+    numberOrLink: ''
+  });
+  setSelectedAgentIndex(null);
+};
+
+const handleAgentClick = index => {
+  const selectedAgent = agentNameDisplay[index];
+  setInputs({
+    agentName: selectedAgent.name,
+    agentPosition: selectedAgent.position,
+    numberOrLink: selectedAgent.numberOrLink
+  });
+  setSelectedAgentIndex(index);
+};
+
+const handleDeleteAgent = () => {
+  if (selectedAgentIndex !== null) {
+    const updatedAgents = [...agentNameDisplay];
+    setAgentNameDisplay(updatedAgents);
     setInputs({
       agentName: '',
       agentPosition: '',
       numberOrLink: ''
     });
-  };
+    setSelectedAgentIndex(null);
+  }
+};
 
   return (
     <Accordion className={Styles.Main} h={'max-content'} borderRadius={30} border={'1px solid rgba(203, 206, 210, 1)'} allowToggle>
@@ -103,7 +146,7 @@ export default function AddLinkSection({ Icon, Text }) {
           {
             AddAgent
               ?
-              <Box>
+              <Box >
                 <FormControl>
                   <FormLabel>Agent name</FormLabel>
                   <Input className={Styles.FromInput} value={inputs.agentName} onChange={(e) => handleInputChange(e, 'agentName')} />
@@ -116,13 +159,18 @@ export default function AddLinkSection({ Icon, Text }) {
                   <FormLabel>Number or link</FormLabel>
                   <Input className={Styles.FromInput} value={inputs.numberOrLink} onChange={(e) => handleInputChange(e, 'numberOrLink')} />
                 </FormControl>
-                <Flex gap={2}>
-                  <Button className={Styles.DeleteButton}><img src={Delete} className={Styles.deleteIcon} alt="" /> Delete link</Button>
+                <Flex pt={30}  flexWrap={"wrap"} rowGap={0} gap={2}>
+                  <Button className={Styles.DeleteButton} onClick={handleDeleteAgent}><img src={Delete} className={Styles.deleteIcon} alt="" /> Delete agent</Button>
                   <Button onClick={handleDone} className={Styles.DoneButtonContainer}><img src={Check} className={Styles.DoneButton} alt="" /> Done</Button>
                 </Flex>
               </Box>
               : ""
           }
+          <Flex gap={15} pt={4} flexWrap={"wrap"}>
+            {agentNameDisplay.map((name, index) => (
+              <Box onClick={() => handleAgentClick(index)} className={Styles.AgentContainer} key={index}>{name.name}</Box>
+            ))}
+          </Flex>
         </AccordionPanel>
       </AccordionItem>
     </Accordion>

@@ -88,7 +88,7 @@
     width: 148px !important;
     height: 64px !important;
     background-color: transparent !important;
-    margin-top: 30px;
+
 }
 
 .DeleteButton:hover {
@@ -110,7 +110,7 @@
     width: 148px !important;
     height: 64px !important;
     background-color: transparent !important;
-    margin-top: 30px;
+
 }
 
 .deleteIcon {
@@ -133,7 +133,8 @@
     height: 20px;
     padding-bottom: 2px;
 }
-.DoneButtonContainer{
+
+.DoneButtonContainer {
     display: flex;
     align-items: center;
     padding: 20px !important;
@@ -151,5 +152,21 @@
     width: 148px !important;
     height: 64px !important;
     background-color: transparent !important;
-    margin-top: 30px;
+
+    
+}
+
+.AgentContainer {
+    padding: 10px 30px;
+    border-radius: 126px;
+    border: 1px;
+    border: 1px solid rgba(37, 211, 102, 1)
+}
+@media screen and (max-width:445px) {
+    .butonsContaier > button{
+        margin: 0 !important;
+    }
+    .butonsContaier{
+        padding-top: 20px;
+    }
 }
