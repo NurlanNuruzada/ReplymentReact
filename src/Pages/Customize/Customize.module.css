@@ -1,0 +1,318 @@
+.MainContainer {
+    width: 100%;
+    height: max-content;
+}
+
+.Header {
+    border-bottom: 1px solid rgba(203, 206, 210, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.Title {
+    font-family: Urbanist;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+}
+
+.AddDomainButton {
+    width: (189px);
+    height: (58px);
+    padding: 19.5px;
+    border-radius: 252px;
+    border: 1px;
+    gap: 16px;
+    border: 1px solid rgba(203, 206, 210, 1);
+}
+
+.PlusIcon {
+    width: 11.08px;
+    height: 11.08px;
+    top: 23.46px;
+    left: 23.46px;
+}
+
+.AddDomainButton {
+    display: flex;
+    gap: 19.6px;
+    font-family: Urbanist;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(28, 27, 31, 1);
+    background-color: white;
+}
+
+.AddDomainButtonLarge {
+    margin-top: 25px;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+    display: flex;
+    align-items: center;
+    background: rgba(203, 206, 210, 0.2);
+    border-radius: 30px;
+    gap: 25px;
+    padding: 38px 25px;
+}
+
+.PlusIconLarge {
+    width: 23.33px;
+    height: 23.33px;
+}
+
+.DomainButton {
+    padding: 19.5px 22px;
+    border-radius: 106px;
+    gap: 12px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    color: rgba(28, 27, 31, 0.5);
+}
+
+.TryPremiumButton {
+    padding: 19.5px 22px;
+    border-radius: 106px;
+    border: 1px;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(238, 190, 65, 1);
+    border: 1px solid rgba(238, 190, 65, 0.4);
+    background: rgba(238, 190, 65, 0.1);
+}
+
+.Banner {
+    font-family: Urbanist;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+    padding: 25px 0;
+
+}
+
+.ButtonSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.SeclectedButtons{
+    height: max-content;
+    max-width: 1035px;
+    gap: 32px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 25px;
+}
+@media screen and (max-width:950px) {
+    .SeclectedButtons{
+        grid-template-columns: 100%;
+        width: 100% !important;
+    }
+    .SeclectedButtons > div {
+        width: 100% !important;
+    }
+}
+
+
+.AccodionContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: max-content !important;
+}
+
+.ArrowIcon {
+    width: max-content;
+}
+
+.AccodionContainer img {
+    width: 23.89px;
+    height: 24px;
+}
+
+.AccodionTitle {
+    padding: 5px;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: rgba(28, 27, 31, 1);
+}
+
+.AcordionButton {
+    padding: 30px !important;
+}
+
+.AccordionBtn {
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 31px 20px !important;
+    border-radius: 156px !important;
+    gap: 10px;
+}
+
+.AccordionBtnContainer {
+    display: flex;
+    max-width: 501px;
+    min-width: 350px !important;
+    gap: 15px;
+    border-radius: 156px;
+    border: 1px;
+    gap: 10px;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+}
+
+.AccordionBtnContainer img {
+    width: 24px;
+    height: 24px;
+
+}
+
+@media screen and (max-width:950px) {
+
+    .AccordionBtnContainer {
+        width: 100%;
+    }
+
+    .Main {
+        width: 100% !important;
+    }
+
+    .AccordionBtn {
+        width: 100% !important;
+    }
+}
+
+.DeleteButton {
+    padding: 20px !important;
+    border-radius: 156px !important;
+    gap: 10px !important;
+    border: 1px solid rgba(255, 103, 103, 1) !important;
+    font-family: Urbanist;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 103, 103, 1) !important;
+    width: 148px !important;
+    height: 64px !important;
+    background-color: transparent !important;
+
+}
+
+.DeleteButton:hover {
+    background-color: transparent !important;
+}
+
+.CancelButton {
+    padding: 20px !important;
+    border-radius: 156px !important;
+    gap: 10px !important;
+    border: 1px solid rgba(203, 206, 210, 1);
+    font-family: Urbanist;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 103, 103, 1) !important;
+    width: 148px !important;
+    height: 64px !important;
+    background-color: transparent !important;
+
+}
+
+.deleteIcon {
+    width: 16px;
+    height: 18px;
+}
+
+.FromInput {
+    max-width: (441px);
+    height: 61px !important;
+    padding: 25px;
+    border-radius: 18px !important;
+    border: 1px;
+    gap: 10px;
+    border: 1px solid rgba(203, 206, 210, 1);
+}
+
+.DoneButton {
+    width: 20px;
+    height: 20px;
+    padding-bottom: 2px;
+}
+
+.DoneButtonContainer {
+    display: flex;
+    align-items: center;
+    padding: 20px !important;
+    border-radius: 156px !important;
+    gap: 10px !important;
+    border: 1px solid rgba(203, 206, 210, 1);
+    color: rgba(28, 27, 31, 1) !important;
+    font-family: Urbanist;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(28, 27, 31, 1);
+    width: 148px !important;
+    height: 64px !important;
+    background-color: transparent !important;
+
+    
+}
+
+.AgentContainer {
+    padding: 10px 30px;
+    border-radius: 126px;
+    border: 1px;
+    border: 1px solid rgba(37, 211, 102, 1)
+}
+@media screen and (max-width:445px) {
+    .butonsContaier > button{
+        margin: 0 !important;
+    }
+    .butonsContaier{
+        padding-top: 20px;
+    }
+}

@@ -1,0 +1,135 @@
+.Main {
+    background-color: #0D0D0D;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff !important;
+    user-select: none;
+    padding: 0 calc(12rem - 1vw);
+    /* Apply padding to .Main */
+}
+
+@media screen and (max-width: 1168px) {
+    .Main {
+        padding: 0 calc(2rem - 1vw);
+    }
+
+}
+
+.Line {
+    height: 2px;
+    background-color: #101010;
+}
+
+.WelcomeTitle {
+    /* Apply gradient background */
+    background-image: linear-gradient(135deg, rgba(225, 225, 225, 1) 0%, rgba(255, 255, 255, 0.1) 85%, rgba(163, 163, 163, 0) 100%);
+    background-size: 300% 300%;
+    animation: anim-bg 6s infinite;
+
+    /* Clip the background to the text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* For Safari */
+    background-clip: text;
+    color: transparent;
+    /* Hide original text */
+
+    font-size: calc(0.5rem + 5.3vw);
+    line-height: calc(1.5rem + 4vw);
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+@media screen and (max-width: 1168px) {
+   .WelcomeTitle{
+    font-size: calc(1.5rem + 5.5vw);
+    line-height: calc(1.5rem + 5.5vw);
+   }
+
+}
+@media screen and (max-width: 700px) {
+   .WelcomeTitle{
+    font-size: calc(2.5rem + 5.5vw);
+    line-height: calc(2rem + 5.5vw);
+   }
+
+}
+@media screen and (max-width:380px) {
+  .WelcomeTitle{
+    font-size: 50px;
+  }
+}
+
+@keyframes anim-bg {
+    0% {
+        background-position: 0% 30%;
+    }
+
+    30% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    70% {
+        background-position: 100% 70%;
+    }
+
+    100% {
+        background-position: 10% 50%;
+    }
+}
+
+.UpContainer {
+    padding: 70px 0;
+}
+
+@keyframes anim-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+.DownContainer {
+    --s: 1px;
+    position: relative;
+    transform-style: preserve-3d;
+    border-radius: 1rem;
+    &::after {
+        content: "";
+        position: absolute;
+        inset: calc(-1*var(--s));
+        background: conic-gradient(from var(--angle) at 50% 50%, #00ffff 0%, #00ABFF 25%, #aa41ff 55%, #e2ff41 75%, #00FF0B 100%);
+        filter: blur(5rem);
+        transform: translate3d(0px, 0px, -1px);
+        border-radius: inherit;
+        pointer-events: none;
+        opacity: 0.35;
+        transition: background-color 1s ease-in-out;
+        animation: 5s rotate linear infinite;
+    }
+}

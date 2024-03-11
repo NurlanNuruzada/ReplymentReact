@@ -1,0 +1,96 @@
+#mainWidgets {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+.css-uttm9k:hover,
+.css-uttm9k[data-hover] {
+    background: none;
+}
+.WidgetsTitle {
+    width: 100%;
+    height: 88px;
+    display: flex;
+    align-items: center;
+}
+
+.WidgetsTitle>h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+    color: black;
+}
+
+.YourWidgets {
+    width: 100%;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(203, 206, 210, 1);
+}
+
+.YourWidgets>h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26.4px;
+    color: black;
+}
+
+.WidgetsIframe {
+    max-width: 501px;
+    height: auto;
+    background-color: white;
+    border: 1px solid rgba(203, 206, 210, 1);
+    border-radius: 30px;
+}
+
+#boxClose {
+    height: 84px !important;
+    display: flex;
+    align-items: center;
+}
+
+.boxCloseinspan {
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+}
+
+#accordionPanelOpen {
+    max-width: 474px;
+
+}
+
+.GeneratorIframe {
+    max-width: 441px;
+    height: auto;
+    border-radius: 30px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 25px;
+    display: flex;
+}
+
+.GeneratorTag {
+    width: 39px;
+    height: 100%;
+    color: black;
+}
+
+.thisByIframe {
+    width: 352px;
+    height: 100%;
+}
+
+
+.copyIframeBtn {
+    width: 151px;
+    height: 64px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    padding: 20px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    margin-top: 30px;
+}

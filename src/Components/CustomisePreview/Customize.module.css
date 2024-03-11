@@ -1,0 +1,97 @@
+.Title {
+    font-family: Urbanist;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #E1E0E4;
+}
+
+.CrudContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:380px) {
+    .PreviewContainer {
+        padding: 8px 23px !important;
+    }
+}
+
+.PreviewContainer {
+    background-color: black;
+    border: 7px #4D4D4D solid;
+    border-radius: 45.04px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    gap: 10px;
+    padding: 25px 50px;
+}
+
+@media screen and (max-width: 450px) {
+    .PreviewContainer {
+        padding: 8px 31px;
+    }
+}
+
+.Navbar {
+    width: 100%;
+    height: 91px;
+}
+
+.RightContainer {
+    width: 100%;
+    max-width: 850px;
+}
+
+.leftContainer {
+    width: 100%;
+    max-width: 300px;
+}
+
+.ContentContainer {
+    display: flex;
+    gap: 40px;
+    padding: 24px 0;
+}
+
+.ButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 20px;
+}
+
+.ActiveText {
+    font-family: Urbanist;
+    font-size: 22px;
+    font-weight: 400 !important;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 15px 0;
+    border-top: 1px solid #101010;
+    padding: 24px 0;
+
+}
+
+@media screen and (max-width: 1165px) {
+    .leftContainer {
+        display: none;
+    }
+}
+
+h2 {
+    font-family: Urbanist;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 24px 0;
+}

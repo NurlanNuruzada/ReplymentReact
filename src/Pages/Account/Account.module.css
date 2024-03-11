@@ -1,0 +1,188 @@
+#mainAccount {
+    width: 100%;
+    height: 265px;
+}
+
+.AccountHeader {
+    width: 100%;
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.AccountTitle {
+    width: auto;
+    height: auto;
+}
+
+.AccountTitle>h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+    color: black;
+}
+
+.AccountButtons {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.DeleteAccount {
+    width: 100px;
+    height: 58px;
+    border-radius: 25.2px;
+    padding: 23.5px 0px 23.5px 0px;
+    color: rgba(255, 103, 103, 1);
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    line-height: 16.5px;
+    font-weight: 600;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.logOutBtn {
+    width: 140px;
+    height: 58px;
+    border-radius: 25.2px;
+    padding: 23.5px 0px 23.5px 0px;
+    color: rgba(255, 103, 103, 1);
+    border: 1px solid rgba(255, 103, 103, 1);
+    background-color: transparent;
+    font-size: 20px;
+    line-height: 16.5px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.logOutBtn>svg {
+    margin-top: -5px;
+    margin-right: 9px;
+}
+
+.logOutBtn>span {
+    margin-top: -2px;
+}
+
+
+.AccountSettings {
+    width: 100%;
+    height: 67px;
+    border-top: 1px solid rgba(203, 206, 210, 1);
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.AccountSettings>h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26.4px;
+    color: black;
+}
+
+.AccountInputs {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.thisInput {
+    width: 48.3%;
+    height: 100%;
+}
+
+.Label {
+    width: 100%;
+    height: 26px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    color: rgba(28, 27, 31, 1);
+}
+
+.byInput {
+    width: 100%;
+    height: 84px;
+    position: relative;
+}
+
+.editEmail {
+    position: absolute;
+    margin-top: -51px;
+    margin-left: 90%;
+}
+
+.byInput>input {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 1451px) {
+    .editEmail {
+        margin-left: 85%;
+    }
+}
+
+@media screen and (max-width: 778px) {
+    .editEmail {
+        margin-left: 89% !important;
+    }
+    .DeleteAccount{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .editEmail {
+        margin-left: 85% !important;
+    }
+}
+
+@media screen and (max-width: 1051px) {
+    .editEmail {
+        margin-left: 92%;
+    }
+
+    #mainAccount {
+        width: 100%;
+        height: 375px;
+    }
+
+    .AccountInputs {
+        flex-direction: column;
+        height: 220px;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .Account_thisInput {
+        width: 100% !important;
+    }
+
+    .Account_AccountInputs {
+        width: 100%;
+    }
+
+    .thisInput {
+        width: 100%;
+        height: 100%;
+    }
+}
