@@ -11,7 +11,7 @@ import {
   AlertDialogFooter,
   Flex,
 } from "@chakra-ui/react";
-import image from "../../Images/Animations/greenDone.gif";
+import image from "../../Images/Animarions/greenDone (2).gif";
 import { useNavigate } from "react-router";
 
 

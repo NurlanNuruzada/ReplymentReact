@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Styles from './SignUpPage.module.css'
 import { Grid, GridItem, CircularProgress } from '@chakra-ui/react'; // Import CircularProgress for loading indicator
-import CustomFrom from '../../Components/CustomForm/CutomFrom'
 import AppImage from '../../Images/Customize 3.png'
 import { useNavigate } from 'react-router';
 import { useFormik } from 'formik';
 import { useMutation } from 'react-query';
-import { login, register } from '../../Services/AuthService';
+import {  register } from '../../Services/AuthService';
 import { useDispatch } from 'react-redux';
-import { loginAction, registerAction } from '../../Redux/Slices/AuthSlice';
-import RegisterScema from '../../Valudations/RegisterSchema';
+import {  registerAction } from '../../Redux/Slices/AuthSlice';
 import * as Yup from 'yup';
+import Done from '../../Components/DoneModal/Done'
 
 export default function SignUpPage() {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false); // State for loading indicator
+    const [registrationSuccess, setRegistrationSuccess] = useState(false);
     const navigate = useNavigate()
     const dispatch = useDispatch();
 
@@ -48,10 +48,12 @@ export default function SignUpPage() {
             onSuccess: (resp) => {
                 setIsLoading(false); // Set loading to false on successful registration
                 dispatch(registerAction(resp));
+                setRegistrationSuccess(true)
             },
             onError: (error) => {
                 setIsLoading(false); // Set loading to false if registration fails
                 setError("Duplicated Mail Address");
+                setRegistrationSuccess(false)
             },
         });
 
@@ -60,9 +62,20 @@ export default function SignUpPage() {
         setError(null);
         LoginFormik.handleChange(e);
     };
-
+    useEffect(() => {
+        if (registrationSuccess) {
+            const timer = setTimeout(() => {
+                setRegistrationSuccess(false);
+            }, 1500);
+            return () => {
+                clearTimeout(timer);
+                navigate('/beta/register')
+            };
+        }
+    }, [registrationSuccess]);
     return (
         <div className={Styles.Main}>
+            {registrationSuccess && <Done firstTitle={"Register"} seccondTitle={"You registered successfuly"} />}
             <Grid className={Styles.MainContainer} templateColumns='repeat(12, 1fr)' gap={6}>
                 <GridItem className={Styles.Spacer} colSpan={1}></GridItem>
                 <GridItem className={Styles.LeftContainer} colSpan={4}>

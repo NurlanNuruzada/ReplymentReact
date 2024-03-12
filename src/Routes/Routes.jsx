@@ -38,7 +38,7 @@ export default function Routes() {
         },
         {
           path: "/beta/Register",
-          element:<SignUpPage />
+          element:<ChakraProvider><SignUpPage /></ChakraProvider>
         },
       ],
     },
