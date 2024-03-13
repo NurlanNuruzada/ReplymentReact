@@ -1,11 +1,55 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Styles from './SignInPage.module.css';
-import { Grid, GridItem } from '@chakra-ui/react';
-import CustomFrom from '../../Components/CustomForm/CutomFrom'
+import { Grid, GridItem, CircularProgress } from '@chakra-ui/react';
 import AppImage from '../../Images/Customize 3.png'
-import AppImageSvg from '../../Images/Customize.svg'
+import { useFormik } from 'formik';
+import { login } from '../../Services/AuthService';
+import { loginAction } from '../../Redux/Slices/AuthSlice';
+import { useDispatch } from 'react-redux';
+import { useMutation } from 'react-query';
+import { useNavigate } from 'react-router';
 
 export default function SignInPage() {
+    const [loginError, setLoginError] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate()
+    const dispatch = useDispatch();
+    const LoginFormik = useFormik({
+        initialValues: {
+            emailOrUsername: "",
+            password: "",
+        },
+        onSubmit: (values) => {
+            setIsLoading(true);
+            LoginMutate(values)
+        },
+    });
+    const { mutate: LoginMutate, isLoading: Loginloading } =
+        useMutation((values) => login(values), {
+            onSuccess: (resp) => {
+                setIsLoading(false);
+                dispatch(loginAction(resp));
+                navigate("/beta/customize")
+            },
+            onError: (error) => {
+                setIsLoading(false);
+                setLoginError("Invalid username or password.");
+            },
+        });
+    const handleInputChange = (e) => {
+        LoginFormik.handleChange(e);
+       
+    };
+    useEffect(() => {
+        if (loginError) {
+            const timer = setTimeout(() => {
+                setLoginError(null);
+            }, 1500);
+            return () => {
+                clearTimeout(timer);
+            };
+        }
+    }, [loginError]);
     return (
         <div className={Styles.Main}>
             <Grid className={Styles.MainContainer} templateColumns='repeat(12, 1fr)' gap={6}>
@@ -15,13 +59,22 @@ export default function SignInPage() {
                         <h1 className={Styles.MainHeader}>Log in your account</h1>
                     </div>
                     <div className={Styles.InputContainer}>
-                        <CustomFrom Title={"Email"} InnerText={"Enter your email adress"}></CustomFrom>
-                        <CustomFrom Title={"Password"} InnerText={"Enter Password"}></CustomFrom>
-                        <button className={Styles.LoginButton}>Log in</button>
-                    </div> 
+                        <form className={Styles.FormContainer} action="" method="get">
+                            <label>Email</label>
+                            <input name="email" onChange={handleInputChange} placeholder={"Enter your email address"} />
+                        </form>
+                        <form className={Styles.FormContainer} action="" method="get">
+                            <label>Password</label>
+                            <input name="password" onChange={handleInputChange} type='password' placeholder={"Enter Password"} />
+                        </form>
+                        <button type='submit' onClick={() => LoginFormik.handleSubmit()} className={Styles.LoginButton}>
+                            {isLoading ? <CircularProgress isIndeterminate size="24px" color="teal" /> : "Log in"}
+                        </button>
+                        {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
+                    </div>
                 </GridItem>
-                <GridItem className={Styles.Spacer}  colSpan={1}></GridItem>
-                <GridItem  className={Styles.RightContainer} colSpan={6}>
+                <GridItem className={Styles.Spacer} colSpan={1}></GridItem>
+                <GridItem className={Styles.RightContainer} colSpan={6}>
                     <img className={Styles.Image} src={AppImage} alt="" />
                 </GridItem>
             </Grid>

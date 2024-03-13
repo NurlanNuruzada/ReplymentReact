@@ -5,9 +5,9 @@ import AppImage from '../../Images/Customize 3.png'
 import { useNavigate } from 'react-router';
 import { useFormik } from 'formik';
 import { useMutation } from 'react-query';
-import {  register } from '../../Services/AuthService';
+import { register } from '../../Services/AuthService';
 import { useDispatch } from 'react-redux';
-import {  registerAction } from '../../Redux/Slices/AuthSlice';
+import { registerAction } from '../../Redux/Slices/AuthSlice';
 import * as Yup from 'yup';
 import Done from '../../Components/DoneModal/Done'
 
@@ -57,7 +57,6 @@ export default function SignUpPage() {
             },
         });
 
-    // Clear error when input changes
     const handleInputChange = (e) => {
         setError(null);
         LoginFormik.handleChange(e);

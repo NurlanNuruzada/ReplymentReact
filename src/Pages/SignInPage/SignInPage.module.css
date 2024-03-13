@@ -181,3 +181,70 @@
         width: 347px !important;
     }
 }
+
+.FormContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.FormContainer input {
+    width: Fixed (501px);
+    height: Hug (74px);
+    padding: 30px;
+    border-radius: 25px;
+    gap: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #E1E0E480;
+    background-color: #0D0D0D;
+}
+
+.FormContainer label {
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: #E1E0E4;
+    text-align: left;
+
+}
+
+.FormContainer input:focus {
+    outline: none;
+    border: none;
+}
+
+.FormContainer input::placeholder {
+    color: rgba(225, 224, 228, 0.5);
+}
+
+@media screen and (max-width: 700px) {
+    .FormContainer input {
+        background-color: #1A1A1A;
+        font-family: Urbanist;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        height: 65px;
+        border-radius: 20px;
+        gap: 10px;
+    }
+
+    .FormContainer label {
+        font-family: Urbanist;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+}

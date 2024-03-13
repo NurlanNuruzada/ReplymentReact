@@ -2,7 +2,6 @@ import { httpClient } from "../Utils/HttpClient";
 
 export const login = async (data) => {
     try {
-        console.log(data+"sendData");
         const response = await httpClient.post('/api/Auth/Login', data);
         return response.data;
     } catch (error) {
