@@ -1,7 +1,9 @@
 import React from 'react'
 import Styles from './WhyReplyment.module.css'
 import LearnMoreCard from './LearnMoreCard.module'
+import { useSelector } from 'react-redux';
 export default function WhyReplyment() {
+    const { token, username } = useSelector((state) => state.auth);
     return (
         <div className={Styles.MainContainer}>
             <div className={Styles.UpContainer}>

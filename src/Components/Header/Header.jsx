@@ -57,7 +57,7 @@ export default function Header({ MenuItems, ShowBurgerMenu, ShowButtons, Positio
                             <p className={Styles.EmailAddress}>{email}</p>
                         </MenuButton>
                         <MenuList>
-                            <MenuItem onClick={dispach(logoutAction())}>Log out</MenuItem>
+                            <MenuItem onClick={() => dispach(logoutAction())}>Log out</MenuItem>
                             <MenuItem onClick={handleNavigate(`/Customize`)}>Get your button</MenuItem>
                         </MenuList>
                     </Menu>

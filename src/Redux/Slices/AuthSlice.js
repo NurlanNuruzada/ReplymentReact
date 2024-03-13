@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     token: null,
-    fullname: null,
     userName: null,
     email: null,
     expireDate: null,
@@ -17,8 +16,7 @@ export const AuthSlice = createSlice({
   reducers: {
     loginAction: (state, action) => {
       state.token = action.payload.token
-      state.fullname = action.payload.fullname
-      state.userName =  action.payload.userName
+      state.username =  action.payload.username
       state.email =  action.payload.email
       state.expireDate = action.payload.expireDate
       state.refreshToken =  action.payload.refreshToken
@@ -35,7 +33,7 @@ export const AuthSlice = createSlice({
     },
   },
 });
-
+ 
 // Export actions and reducer
 export const { loginAction, logoutAction, registerAction,setUsetJobAction } = AuthSlice.actions;
 export default AuthSlice.reducer;
