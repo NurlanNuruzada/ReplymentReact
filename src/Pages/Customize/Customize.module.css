@@ -125,7 +125,7 @@
 }
 
 
-.SeclectedButtons{
+.SeclectedButtons {
     height: max-content;
     max-width: 1035px;
     gap: 32px;
@@ -133,12 +133,218 @@
     grid-template-columns: 50% 50%;
     padding-top: 25px;
 }
+
+.CustomizeYourWidgetTitle {
+    width: 100%;
+    height: 67px;
+}
+
+.CustomizeYourWidgetTitle>h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26.4px;
+}
+
+
+.CustomizeYourWidget {
+    width: 100%;
+    height: 2013px;
+}
+
+.CustomizeYourWidget_Up {
+    width: 100%;
+    height: 1100px;
+}
+
+.CustomizeYourWidget_Up_in {
+    width: 277px;
+    height: 1075px;
+}
+
+.Color {
+    width: 142px;
+    height: 85px;
+}
+
+.Color>p {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.colorBtn {
+    width: 142px;
+    height: 59px;
+    border-radius: 252px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.colorBtnDiv {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ButtonImage {
+    width: 261px;
+    height: 85px;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.ButtonImageTitle {
+    height: 26px;
+    width: 100%;
+    display: flex;
+}
+
+.ButtonImageTitle>p {
+    font-weight: 500;
+    line-height: 22px;
+    font-size: 20px;
+    color: black;
+    margin-right: 13px;
+}
+
+.ButtonImagelabel {
+    width: 100%;
+    height: 59px;
+    border-radius: 252px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 20px;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.5px;
+    display: flex;
+}
+
+
+.ButtonStyle {
+    width: 277px;
+    height: 85px;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.ButtonStyle>p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.ButtonStyle>div {
+    margin-top: 12px;
+    width: 100%;
+    height: 59px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnStyleTip {
+    width: 122px;
+    height: 59px;
+    border-radius: 252px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 10px;
+    gap: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 16.5px;
+}
+
+.btnStyleTip>label>input {
+    border-radius: 50%;
+    color: rgba(37, 211, 102, 1);
+    background-color: rgba(37, 211, 102, 1);
+
+}
+
+.btnStyleTip>label>span{
+    margin-left: 14px;
+}
+
+.btnSize{
+    width: 100%;
+    height: 59px;
+    gap: 16px;
+    border-radius: 252px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 28.5px;
+}
+
+
+
+
+
+
+.CustomizeYourWidget_Down {
+    width: 100%;
+    height: 913px;
+}
+
+.GreetingMessage{
+    width: 391px;
+    height: 762px;
+    gap: 25px;
+}
+
+.AgentName{
+    width: 270px;
+    height: 85px;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.AgentName>p{
+    font-size: 22px;
+    line-height: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+.AgentName>input{
+    margin-top: 12px;
+    width: 100%;
+    height: 59px;
+    border-radius: 252px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 24px;
+    gap: 16px;
+}
+
+.SaveChanges{
+    margin-top: 25px;
+    width: 169px;
+    height: 59px;
+    border-radius: 252px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 20px;
+    gap: 16px;
+    display: flex;
+}
+
+
+
+
+
+
 @media screen and (max-width:950px) {
-    .SeclectedButtons{
+    .SeclectedButtons {
         grid-template-columns: 100%;
         width: 100% !important;
     }
-    .SeclectedButtons > div {
+
+    .SeclectedButtons>div {
         width: 100% !important;
     }
 }

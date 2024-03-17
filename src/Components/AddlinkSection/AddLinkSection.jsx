@@ -21,22 +21,50 @@ import {
 import Delete from "../../Images/delete.svg"
 import Check from "../../Images/check.svg"
 
-export default function AddLinkSection({ Icon, Text }) {
+export default function AddLinkSection({ SelectedButtons }) {
   const [isWhatsapp, setIsWhatsapp] = useState(false);
   const [AddLink, setAddLink] = useState(false);
   const [AddAgent, setAddAgent] = useState(false);
+  const [stateAddressUrl, setStateAddressUrl] = useState({});
+  const [yourButtonLink, setYourButtonLink] = useState("")
+  const [linkInputValue, setLinkInputValue] = useState("");
+  const [agents, setAgents] = useState([]);  //bu butun agent'leri saxlayir
 
+
+  const [links, setLinks] = useState(() => SelectedButtons.reduce((acc, button) => ({
+    ...acc,
+    [button.Name]: ''
+  }), {}));
+
+  const YourSelectButton = {
+    buttons: SelectedButtons.map(button => ({
+      Name: button.Name,
+      AddressUrl: links[button.Name] || '', 
+      IsWhatsapp : button.id===1 ? true : false,
+      CreateAgentsDtos : button.id===1 ? agents : null
+    }))
+  };
+  console.log("--|||--", YourSelectButton);
   useEffect(() => {
     if (Text === "Whatsapp") {
       setIsWhatsapp(true);
     }
   }, [Text]);
 
-  const [inputs, setInputs] = useState({
+  // console.log("ASSS", agents);
+
+  const [inputs, setInputs] = useState({   //input state' agent'i tutur
     agentName: '',
     agentPosition: '',
     numberOrLink: ''
   });
+
+  const handleLinkChange = (buttonName, value) => {
+    setLinks(prev => ({
+      ...prev,
+      [buttonName]: value
+    }));
+  };
 
   const handleInputChange = (e, fieldName) => {
     setInputs({
@@ -45,17 +73,24 @@ export default function AddLinkSection({ Icon, Text }) {
     });
   };
 
-  const handleAddLink = () => {
-    setAddLink(!AddLink);
+  const handleAddLink = (buttonName) => {
+    setStateAddressUrl(prev => ({
+      ...prev,
+      [buttonName]: linkInputValue
+    }));
+    setLinkInputValue("");
   };
 
   const handleAddAgent = () => {
-    setAddAgent(!AddLink); // Note: should be setAddAgent(!AddAgent)
+    setAddAgent(!AddLink); 
   };
 
   const handleDone = () => {
     console.log("Inputs:", inputs);
-    setAddAgent(!AddLink);
+    setAddAgent(!AddAgent);
+
+    setAgents(prevAgents => [...prevAgents, inputs]);
+
     setInputs({
       agentName: '',
       agentPosition: '',
@@ -64,42 +99,40 @@ export default function AddLinkSection({ Icon, Text }) {
   };
 
   return (
-    <Accordion className={Styles.Main} h={'max-content'} borderRadius={30} border={'1px solid rgba(203, 206, 210, 1)'} allowToggle>
-      <AccordionItem border={"none"}>
-        <AccordionButton className={Styles.AcordionButton} _hover={{ bg: 'none' }}>
-          <Box as="span" flex='1' textAlign='left'>
-            <div className={Styles.AccodionContainer}>
-              <img src={Icon} alt="" />
-              <p className={Styles.AccodionTitle}>
-                {Text}
-              </p>
-            </div>
-          </Box>
-          <AccordionIcon color={"rgba(37, 211, 102, 1)"} className={Styles.ArrowIcon} fontSize={34} />
-        </AccordionButton>
-        <AccordionPanel pb={30} pl={30} pr={30} border={"none"}>
-          {!AddLink && !AddAgent &&
+    SelectedButtons.map((button, index) => (
+      <Accordion key={index} className={Styles.Main} h={'max-content'} borderRadius={30} border={'1px solid rgba(203, 206, 210, 1)'} allowToggle>
+        <AccordionItem border={"none"}>
+          <AccordionButton className={Styles.AcordionButton} _hover={{ bg: 'none' }}>
+            <Box as="span" flex='1' textAlign='left'>
+              <div className={Styles.AccodionContainer}>
+                <img src={button.icon} alt="" />
+                <p className={Styles.AccodionTitle}>
+                  {button.Name}
+                </p>
+              </div>
+            </Box>
+            <AccordionIcon color={"rgba(37, 211, 102, 1)"} className={Styles.ArrowIcon} fontSize={34} />
+          </AccordionButton>
+          <AccordionPanel pb={30} pl={30} pr={30} border={"none"}>
             <Box className={Styles.AccordionBtnContainer}>
-              <Button bg={'transparent'} onClick={handleAddLink} className={Styles.AccordionBtn}><img src={CustomLink} alt="" />Add link</Button>
-              {isWhatsapp &&
+              <Button bg={'transparent'} onClick={() => setAddLink(!AddLink)} className={Styles.AccordionBtn}><img src={CustomLink} alt="" />Add link</Button>
+              {button.id === 1 &&
                 <Button onClick={handleAddAgent} bg={'transparent'} className={Styles.AccordionBtn}><img src={CustomLink} alt="" />Add agent</Button>
               }
             </Box>
-          }
-          {
-            AddLink ?
+            {
+              AddLink &&
               <Box>
-                <FormControl >
+                <FormControl>
                   <FormLabel>Link</FormLabel>
-                  <Input className={Styles.FromInput} type='email' />
+                  <Input className={Styles.FromInput} type="text" value={links[button.Name]} onChange={(e) => handleLinkChange(button.Name, e.target.value)} />
                 </FormControl>
                 <Flex gap={2}>
-                  <Button className={Styles.DeleteButton}><img src={Delete} className={Styles.deleteIcon} alt="" /> Delete link</Button>
+                  <Button className={Styles.DeleteButton} onClick={() => handleLinkChange(button.Name, '')}><img src={Delete} className={Styles.deleteIcon} alt="" /> Delete link</Button>
                 </Flex>
               </Box>
-              :
-              ""
-          }
+            }
+          </AccordionPanel>
           {
             AddAgent
               ?
@@ -123,8 +156,9 @@ export default function AddLinkSection({ Icon, Text }) {
               </Box>
               : ""
           }
-        </AccordionPanel>
-      </AccordionItem>
-    </Accordion>
+        </AccordionItem>
+      </Accordion >
+    ))
   );
 }
+
