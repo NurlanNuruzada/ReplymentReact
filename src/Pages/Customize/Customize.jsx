@@ -42,14 +42,37 @@ export default function Customize() {
   const [newDomain, setNewDomain] = useState('')
   const [ShowDomain, setShowDomain] = useState('')
   const [display, setdisplay] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
   //Customize------------------------------------------------------
+  const [customizeStyle, setCustomizeStyle] = useState({
+    color: '',
+    buttonImage: '',
+    buttonStyle: true,
+    backgroundStyle: true,
+    buttonSize: '',
+    borderRadius: '',
+    shadow: '',
+    opacity: '',
+    position: '',
+    display: '',
+    GreetingMessage: true,
+    avatorOrLogo: '',
+    agentName: '',
+    agentPosition: '',
+    greetingMessage: '',
+    callToAction: '',
+    googleAnalytics: true
+  });
+  console.log('customizeStyle', customizeStyle);
 
-  const [showModal, setShowModal] = useState(false);
+
   const [selectedColor, setSelectedColor] = useState("#000000");
   const [selectedImage, setSelectedImage] = useState(null);
   const [classicSelected, setClassicSelected] = useState(true);
   const [rectangleSelected, setRectangleSelected] = useState(false);
+  const [solidSelected, setSolidSelected] = useState(true);
+  const [gradientSelected, setGradientSelected] = useState(false);
   const [buttonSizeValue, setButtonSizeValue] = useState(30);
   const [borderRadiusValue, setBorderRadiusValue] = useState(30);
   const [shadowValue, setShadowValue] = useState(30);
@@ -69,31 +92,38 @@ export default function Customize() {
 
   const handleCheckboxChangeAnalytics = () => {
     setIsCheckedGreetingAnalytics(!isCheckedGreetingAnalytics);
+    setCustomizeStyle(prevState => ({ ...prevState, googleAnalytics: isCheckedGreetingAnalytics === true ? true : false }));
   };
 
   const handleInputAgentGreetingMessage = (event) => {
     setInputAgentGreetingMessage(event.target.value);
+    setCustomizeStyle(prevState => ({ ...prevState, greetingMessage: event.target.value }));
   };
 
   const handleInputAgentAction = (event) => {
     setInputAgentAction(event.target.value);
+    setCustomizeStyle(prevState => ({ ...prevState, callToAction: event.target.value }));
   };
 
   const handleInputAgentPosistion = (event) => {
     setInputAgentPosistion(event.target.value);
+    setCustomizeStyle(prevState => ({ ...prevState, agentPosition: event.target.value }));
   };
 
   const handleInputAgentName = (event) => {
     setInputAgentName(event.target.value);
+    setCustomizeStyle(prevState => ({ ...prevState, agentName: event.target.value }));
   };
 
   const handleImageChangeAvatar = (event) => {
     const imageFile = event.target.files[0];
     setSelectedImageAvatar(imageFile);
+    setCustomizeStyle(prevState => ({ ...prevState, avatorOrLogo: imageFile }));
   };
 
   const handleCheckboxChangeGreeting = () => {
     setIsCheckedGreeting(!isCheckedGreeting);
+    setCustomizeStyle(prevState => ({ ...prevState, GreetingMessage: isCheckedGreeting === true ? true : false }));
   };
 
 
@@ -104,21 +134,34 @@ export default function Customize() {
     } else if (name === "mobile") {
       setMobileSelected(checked);
     }
+    if (desktopSelected === true && mobileSelected === true) {
+      setCustomizeStyle(prevState => ({ ...prevState, display: 2 }));
+    }
+    if (desktopSelected === true && mobileSelected === false) {
+      setCustomizeStyle(prevState => ({ ...prevState, display: 0 }));
+    }
+    if (desktopSelected === false && mobileSelected === true) {
+      setCustomizeStyle(prevState => ({ ...prevState, display: 1 }));
+    }
   };
 
 
   const handleChangeOpacity = (event) => {
     setOpacityValue(parseInt(event.target.value));
+    setCustomizeStyle(prevState => ({ ...prevState, opacity: event.target.value }));
   };
 
   const handleChangeShadow = (event) => {
     setShadowValue(parseInt(event.target.value));
+    setCustomizeStyle(prevState => ({ ...prevState, shadow: event.target.value }));
   };
   const handleChangeButtonRadius = (event) => {
     setBorderRadiusValue(parseInt(event.target.value));
+    setCustomizeStyle(prevState => ({ ...prevState, borderRadius: event.target.value }));
   };
   const handleChangeButtonSize = (event) => {
     setButtonSizeValue(parseInt(event.target.value));
+    setCustomizeStyle(prevState => ({ ...prevState, buttonSize: event.target.value }));
   };
 
   const handleCheckboxChangePosition = (event) => {
@@ -134,6 +177,23 @@ export default function Customize() {
         setLeftSelected(false);
       }
     }
+    setCustomizeStyle(prevState => ({ ...prevState, position: classicSelected === true ? true : false }));
+  };
+
+  const handleCheckboxBackground = (event) => {
+    const { name, checked } = event.target;
+    if (name === "Solid") {
+      setSolidSelected(true);
+      if (checked) {
+        setGradientSelected(false);
+      }
+    } else if (name === "Gradient") {
+      setGradientSelected(checked);
+      if (checked) {
+        setSolidSelected(false);
+      }
+    }
+    setCustomizeStyle(prevState => ({ ...prevState, backgroundStyle: solidSelected === true ? true : false }));
   };
 
   const handleCheckboxChange = (event) => {
@@ -149,21 +209,32 @@ export default function Customize() {
         setClassicSelected(false);
       }
     }
+    setCustomizeStyle(prevState => ({ ...prevState, buttonStyle: classicSelected === true ? true : false }));
   };
 
   const handleImageChange = (event) => {
     const imageFile = event.target.files[0];
     setSelectedImage(imageFile);
+    setCustomizeStyle(prevState => ({ ...prevState, buttonImage: imageFile }));
   };
+
+
+  const handleColorChange = (color) => {
+    setSelectedColor(color.hex);
+    setCustomizeStyle(prevState => ({ ...prevState, color: color.hex }));
+  };
+
+
+
+  const [saveChanges, setSaveChanges] = useState(false);
+  //Customize------------------------------------------------------
+
+
+
 
   const toggleModal = () => {
     setShowModal(!showModal);
   };
-
-  const handleColorChange = (color) => {
-    setSelectedColor(color.hex);
-  };
-
   const HandleDisplay = () => {
     if (newDomain !== null && newDomain !== "") {
       setdisplay(true)
@@ -175,6 +246,7 @@ export default function Customize() {
   }
 
 
+
   const [stateAddressUrl, setStateAddressUrl] = useState("");
 
   const initialRef = React.useRef(null)
@@ -184,6 +256,7 @@ export default function Customize() {
     HandleDisplay();
     onClose();
   };
+
   const [SelectedButtons, setSelectedButtons] = useState([]);
 
   const handleButtonClick = (button) => {
@@ -257,7 +330,7 @@ export default function Customize() {
             <div className={Styles.SeclectedButtons}>
               {/* {SelectedButtons.map((button, index) => ( */}
               <div>
-                <AddLinkSection IsSelected={true} SelectedButtons={SelectedButtons} />
+                <AddLinkSection IsSelected={true} saveChanges={saveChanges} customizeStyle={customizeStyle} SelectedButtons={SelectedButtons} />
               </div>
               {/* ))} */}
             </div>
@@ -413,8 +486,43 @@ export default function Customize() {
               </div>
             </div>
 
+
             <div className={Styles.ButtonStyle}>
-              <p>Button style</p>
+              <p>Background style</p>
+              <div>
+                <div>
+                  <div className={Styles.btnStyleTip}>
+                    <label>
+                      <input
+                        type="radio"
+                        name="Solid"
+                        checked={classicSelected}
+                        onChange={handleCheckboxBackground}
+                      />
+                      <span>Classic</span>
+                    </label>
+                  </div>
+                </div>
+                <div>
+                  <div style={{ width: '143px' }} className={Styles.btnStyleTip}>
+                    <label>
+                      <input
+                        type="radio"
+                        name="Gradient"
+                        checked={rectangleSelected}
+                        onChange={handleCheckboxBackground}
+                      />
+                      <span>Rectangle</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className={Styles.ButtonStyle}>
+              <p>Button size</p>
               <div className={Styles.btnSize}>
                 <input
                   type="range"
@@ -587,95 +695,99 @@ export default function Customize() {
                 <span style={{ marginLeft: "10px" }}>Enable</span>
               </label>
             </div>
+            {isCheckedGreeting === true && (
+              <div>
+                <div className={Styles.ButtonImage}>
+                  <div className={Styles.ButtonImageTitle}>
+                    <p>Avator or logo</p>
+                  </div>
+                  <div className={Styles.ButtonImagelabel}>
+                    <label htmlFor="file-input">
+                      <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.14616 12.8333C3.94546 12.8333 2.9196 12.4177 2.06855 11.5865C1.21751 10.7552 0.791992 9.73924 0.791992 8.53855C0.791992 7.50938 1.10206 6.59237 1.7222 5.78751C2.34234 4.98264 3.1538 4.46806 4.15658 4.24376C4.48644 3.02987 5.14616 2.04688 6.13574 1.2948C7.12533 0.542713 8.24685 0.166672 9.50033 0.166672C11.0441 0.166672 12.3536 0.704345 13.429 1.77969C14.5043 2.85504 15.042 4.16459 15.042 5.70834C15.9524 5.81389 16.7078 6.20643 17.3081 6.88594C17.9085 7.56546 18.2087 8.36042 18.2087 9.27084C18.2087 10.2604 17.8623 11.1016 17.1696 11.7943C16.4769 12.487 15.6357 12.8333 14.6462 12.8333H10.292C9.85658 12.8333 9.48383 12.6783 9.17376 12.3682C8.86369 12.0582 8.70866 11.6854 8.70866 11.25V7.17292L7.44199 8.40001L6.33366 7.29167L9.50033 4.12501L12.667 7.29167L11.5587 8.40001L10.292 7.17292V11.25H14.6462C15.2003 11.25 15.6687 11.0587 16.0514 10.676C16.434 10.2934 16.6253 9.82501 16.6253 9.27084C16.6253 8.71667 16.434 8.24827 16.0514 7.86563C15.6687 7.48299 15.2003 7.29167 14.6462 7.29167H13.4587V5.70834C13.4587 4.6132 13.0727 3.67969 12.3008 2.90782C11.529 2.13594 10.5955 1.75001 9.50033 1.75001C8.40519 1.75001 7.47168 2.13594 6.6998 2.90782C5.92793 3.67969 5.54199 4.6132 5.54199 5.70834H5.14616C4.38088 5.70834 3.72776 5.97883 3.18678 6.5198C2.64581 7.06077 2.37533 7.71389 2.37533 8.47917C2.37533 9.24445 2.64581 9.89758 3.18678 10.4385C3.72776 10.9795 4.38088 11.25 5.14616 11.25H7.12533V12.8333H5.14616Z" fill="#1C1B1F" />
+                      </svg>
+                    </label>
+                    <p>Choose a file or drag it here</p>
+                  </div>
+                  <input
+                    id="file-input"
+                    type="file"
+                    accept="image/*"
+                    style={{ display: "none" }}
+                    onChange={handleImageChangeAvatar}
+                  />
+                  {selectedImageAvatar && (
+                    <div>
+                      <img
+                        src={URL.createObjectURL(selectedImageAvatar)}
+                        alt="Seçilen Resim"
+                        style={{ maxWidth: "100%", maxHeight: 200 }}
+                      />
+                    </div>
+                  )}
+                </div>
 
-            <div className={Styles.ButtonImage}>
-              <div className={Styles.ButtonImageTitle}>
-                <p>Avator or logo</p>
-              </div>
-              <div className={Styles.ButtonImagelabel}>
-                <label htmlFor="file-input">
-                  <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.14616 12.8333C3.94546 12.8333 2.9196 12.4177 2.06855 11.5865C1.21751 10.7552 0.791992 9.73924 0.791992 8.53855C0.791992 7.50938 1.10206 6.59237 1.7222 5.78751C2.34234 4.98264 3.1538 4.46806 4.15658 4.24376C4.48644 3.02987 5.14616 2.04688 6.13574 1.2948C7.12533 0.542713 8.24685 0.166672 9.50033 0.166672C11.0441 0.166672 12.3536 0.704345 13.429 1.77969C14.5043 2.85504 15.042 4.16459 15.042 5.70834C15.9524 5.81389 16.7078 6.20643 17.3081 6.88594C17.9085 7.56546 18.2087 8.36042 18.2087 9.27084C18.2087 10.2604 17.8623 11.1016 17.1696 11.7943C16.4769 12.487 15.6357 12.8333 14.6462 12.8333H10.292C9.85658 12.8333 9.48383 12.6783 9.17376 12.3682C8.86369 12.0582 8.70866 11.6854 8.70866 11.25V7.17292L7.44199 8.40001L6.33366 7.29167L9.50033 4.12501L12.667 7.29167L11.5587 8.40001L10.292 7.17292V11.25H14.6462C15.2003 11.25 15.6687 11.0587 16.0514 10.676C16.434 10.2934 16.6253 9.82501 16.6253 9.27084C16.6253 8.71667 16.434 8.24827 16.0514 7.86563C15.6687 7.48299 15.2003 7.29167 14.6462 7.29167H13.4587V5.70834C13.4587 4.6132 13.0727 3.67969 12.3008 2.90782C11.529 2.13594 10.5955 1.75001 9.50033 1.75001C8.40519 1.75001 7.47168 2.13594 6.6998 2.90782C5.92793 3.67969 5.54199 4.6132 5.54199 5.70834H5.14616C4.38088 5.70834 3.72776 5.97883 3.18678 6.5198C2.64581 7.06077 2.37533 7.71389 2.37533 8.47917C2.37533 9.24445 2.64581 9.89758 3.18678 10.4385C3.72776 10.9795 4.38088 11.25 5.14616 11.25H7.12533V12.8333H5.14616Z" fill="#1C1B1F" />
-                  </svg>
-                </label>
-                <p>Choose a file or drag it here</p>
-              </div>
-              <input
-                id="file-input"
-                type="file"
-                accept="image/*"
-                style={{ display: "none" }}
-                onChange={handleImageChangeAvatar}
-              />
-              {selectedImageAvatar && (
-                <div>
-                  <img
-                    src={URL.createObjectURL(selectedImageAvatar)}
-                    alt="Seçilen Resim"
-                    style={{ maxWidth: "100%", maxHeight: 200 }}
+                <div className={Styles.AgentName}>
+                  <p>Agent name</p>
+                  <input
+                    type="text"
+                    value={inputAgentName}
+                    onChange={handleInputAgentName}
+                    placeholder="Enter Text..."
                   />
                 </div>
-              )}
-            </div>
+                <div className={Styles.AgentName}>
+                  <p>Agent position</p>
+                  <input
+                    type="text"
+                    value={inputAgentPosistion}
+                    onChange={handleInputAgentPosistion}
+                    placeholder="Enter Text..."
+                  />
+                </div>
 
-            <div className={Styles.AgentName}>
-              <p>Agent name</p>
-              <input
-                type="text"
-                value={inputAgentName}
-                onChange={handleInputAgentName}
-                placeholder="Enter Text..."
-              />
-            </div>
-            <div className={Styles.AgentName}>
-              <p>Agent position</p>
-              <input
-                type="text"
-                value={inputAgentPosistion}
-                onChange={handleInputAgentPosistion}
-                placeholder="Enter Text..."
-              />
-            </div>
-
-            <div style={{ width: '100%' }} className={Styles.AgentName}>
-              <p>Greeting message</p>
-              <input
-                type="text"
-                value={inputAgentGreetingMessage}
-                onChange={handleInputAgentGreetingMessage}
-                placeholder="Enter Text..."
-              />
-            </div>
+                <div style={{ width: '100%' }} className={Styles.AgentName}>
+                  <p>Greeting message</p>
+                  <input
+                    type="text"
+                    value={inputAgentGreetingMessage}
+                    onChange={handleInputAgentGreetingMessage}
+                    placeholder="Enter Text..."
+                  />
+                </div>
 
 
-            <div className={Styles.AgentName}>
-              <p>Call to action</p>
-              <input
-                type="text"
-                value={inputAgentAction}
-                onChange={handleInputAgentAction}
-                placeholder="Message us..."
-              />
-            </div>
+                <div className={Styles.AgentName}>
+                  <p>Call to action</p>
+                  <input
+                    type="text"
+                    value={inputAgentAction}
+                    onChange={handleInputAgentAction}
+                    placeholder="Message us..."
+                  />
+                </div>
 
-            <p style={{ marginTop: '25px' }}>Google Analytics</p>
-            <div className={Styles.colorBtn}>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={isCheckedGreetingAnalytics}
-                  onChange={handleCheckboxChangeAnalytics}
-                />
-                <span style={{ marginLeft: "10px" }}>Enable</span>
-              </label>
-            </div>
-
+                <p style={{ marginTop: '25px' }}>Google Analytics</p>
+                <div className={Styles.colorBtn}>
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={isCheckedGreetingAnalytics}
+                      onChange={handleCheckboxChangeAnalytics}
+                    />
+                    <span style={{ marginLeft: "10px" }}>Enable</span>
+                  </label>
+                </div>
+              </div>
+            )}
           </div>
 
-          <button className={Styles.SaveChanges}><svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4.56035 10.25L0.0478516 5.73752L1.17598 4.60939L4.56035 7.99377L11.8239 0.730225L12.952 1.85835L4.56035 10.25Z" fill="#1C1B1F" />
-          </svg>
-            <span>Save changes</span></button>
+          <button onClick={() => setSaveChanges(true)} className={Styles.SaveChanges}>
+            <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.56035 10.25L0.0478516 5.73752L1.17598 4.60939L4.56035 7.99377L11.8239 0.730225L12.952 1.85835L4.56035 10.25Z" fill="#1C1B1F" />
+            </svg>
+            <span>Save changes</span>
+          </button>
 
         </div>
       </div>

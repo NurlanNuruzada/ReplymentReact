@@ -38,7 +38,6 @@ export default function SignInPage() {
         });
     const handleInputChange = (e) => {
         LoginFormik.handleChange(e);
-       
     };
     useEffect(() => {
         if (loginError) {

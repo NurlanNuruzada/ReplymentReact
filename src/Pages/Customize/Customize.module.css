@@ -148,7 +148,7 @@
 
 .CustomizeYourWidget {
     width: 100%;
-    height: 2013px;
+    max-height: 2013px;
 }
 
 .CustomizeYourWidget_Up {
@@ -230,7 +230,7 @@
     width: 277px;
     height: 85px;
     gap: 12px;
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .ButtonStyle>p {
@@ -289,7 +289,7 @@
 
 .CustomizeYourWidget_Down {
     width: 100%;
-    height: 913px;
+   max-height: 913px;
 }
 
 .GreetingMessage{
