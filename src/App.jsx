@@ -1,10 +1,13 @@
-import { ReactQueryDevtools } from "react-query/devtools";
-import Routes from "./Routes/Routes";
-export function App() {
-  return (
-    <div>
-      <Routes />
-      <ReactQueryDevtools initialIsOpen="false" position="bottom-right" />
-    </div>
-  );
-}
+const express = require('express');
+const path = require('path');
+const app = express();
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/healthz', (req, res) => res.send('Healthy'));
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.listen(9000);
