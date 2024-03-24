@@ -14,8 +14,8 @@ import Customize from '../Pages/Customize/Customize'
 import Trigger from "../Pages/Trigger/Trigger";
 import Account from '../Pages/Account/Account'
 import Widgets from '../Pages/Widgets/Widgets'
-import Subscription from '../Pages/Subscription/Subscription'
 import CustomizeButtons from "../Components/YourCustomize/CustomizeButtons";
+import Subscription from '../Pages/Subscription/subscription'
 
 export default function Routes() {
   let routes = [
