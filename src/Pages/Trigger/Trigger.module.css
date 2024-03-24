@@ -1,3 +1,179 @@
-.MainContainer{
+.MainContainer {
     width: 100%;
+    height: 200px;
 }
+
+.TriggerTitle {
+    width: 100%;
+    height: 98px;
+    padding: 30px 0px 30px 0px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.TriggerTitle>h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+    color: black;
+}
+
+.Tdomain {
+    margin-left: 15px;
+    width: 180px;
+    height: 50px;
+    border-radius: 106px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 22px;
+    gap: 12px;
+    color: rgba(28, 27, 31, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.active {
+    width: 102px;
+    height: 38px;
+    border-radius: 35px;
+    padding: 15px 32px;
+    color: rgba(37, 211, 102, 1);
+    margin-left: 24px;
+    gap: 10px;
+    background-color: rgba(37, 211, 102, 0.2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.TrigerSetting {
+    width: 100%;
+    height: 67px;
+    padding: 25px 0px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.TrigerSetting>h2 {
+    color: rgba(28, 27, 31, 1);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26.4px;
+}
+
+.PaymentCurrently {
+    width: 100%;
+    height: 421px;
+    border-radius: 30px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 30px;
+    gap: 30px;
+}
+
+.PaymentTetx {
+    width: 100%;
+    height: 24px;
+    display: flex;
+
+}
+
+.PaymentTetx>span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: rgba(28, 27, 31, 1);
+    margin-left: 15px;
+}
+
+.EditStatus {
+    width: 100%;
+    height: 90px;
+    margin-top: 30px;
+}
+
+.EditStatus>p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: rgba(28, 27, 31, 0.7);
+}
+
+.EditStatus>input {
+    width: 100%;
+    height: 61px;
+    border-radius: 18px;
+    border: 1px solid rgba(203, 206, 210, 1);
+    padding: 25px;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.StatusType {
+    margin-top: 30px;
+    width: 100%;
+    height: 187px;
+    gap: 30px;
+}
+
+.StatusTypeIn {
+    width: 100%;
+    height: 93px;
+    gap: 15px;
+}
+
+.StatusTypeIn>p {
+    width: 100%;
+    height: 14px;
+    color: rgba(28, 27, 31, 0.7);
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.StatusTypeIn>div {
+    width: 100%;
+    height: 64px;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.StatusTypeIn>div>button {
+    max-width: 113px;
+    height: 64px;
+    border-radius: 156px;
+    padding: 26.5px;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17.6px;
+    margin-left: 15px;
+}
+
+.SaveButton {
+    margin-top: 30px;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.SaveButton>button {
+    min-width: 139px;
+    height: 64px;
+    border-radius: 156px;
+    padding: 20px;
+    gap: 10px;
+    font-weight: 600;
+    line-height: 17.6px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.SaveButton>button>span {
+    margin-left: 10px;
+}
+

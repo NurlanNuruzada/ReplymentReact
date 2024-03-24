@@ -35,6 +35,13 @@ import GoogleMaps from '../../Images/IconImage/GoogleMaps-Icon-alone-1 1.svg';
 import CheckImage from '../../Images/check.svg';
 import AddLinkSection from '../../Components/AddlinkSection/AddLinkSection'
 import { CirclePicker, HuePicker } from "react-color";
+import { useFormik } from 'formik';
+import axios from 'axios';
+import { useDispatch, useSelector } from "react-redux";
+import { useQuery, useMutation, useQueryClient } from "react-query";
+import { Select } from '@chakra-ui/react'
+import { GetAllDomains } from "../../Services/DomainService";
+import CustomizeButtons from "../../Components/YourCustomize/CustomizeButtons";
 
 
 export default function Customize() {
@@ -44,27 +51,53 @@ export default function Customize() {
   const [display, setdisplay] = useState(false)
   const [showModal, setShowModal] = useState(false);
 
+  // const { appUserId } = useSelector((x) => x.AuthReducer);
+  const queryClient = useQueryClient();
+
+  // console.log("AppUserId", appUserId);
+  const domainFormik = useFormik({
+    initialValues: {
+      DomainUrl: newDomain ? newDomain : '',
+      AppUserId: '9a524e9c-2507-4721-adaa-f762fa842e2a',
+    },
+    onSubmit: async (values) => {
+      const formData = new FormData();
+
+      formData.append('DomainUrl', newDomain ? newDomain : '');
+      formData.append("AppUserId", '9a524e9c-2507-4721-adaa-f762fa842e2a');
+
+      const response = await axios.post('https://localhost:7091/api/Domains', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      })
+      if (response.status === 201) {
+        queryClient.invalidateQueries('GetAllDomains');
+      }
+    },
+  });
+
   //Customize------------------------------------------------------
   const [customizeStyle, setCustomizeStyle] = useState({
     color: '',
     buttonImage: '',
-    buttonStyle: true,
-    backgroundStyle: true,
+    buttonStyle: 0,
+    backgroundStyle: 0,
     buttonSize: '',
     borderRadius: '',
     shadow: '',
     opacity: '',
-    position: '',
-    display: '',
+    position: true,
+    display: 0,
     GreetingMessage: true,
     avatorOrLogo: '',
     agentName: '',
     agentPosition: '',
     greetingMessage: '',
     callToAction: '',
-    googleAnalytics: true
+    googleAnalytics: false
   });
-  console.log('customizeStyle', customizeStyle);
+  // console.log('customizeStyle', customizeStyle);
 
 
   const [selectedColor, setSelectedColor] = useState("#000000");
@@ -85,9 +118,11 @@ export default function Customize() {
   const [selectedImageAvatar, setSelectedImageAvatar] = useState(null);
   const [inputAgentName, setInputAgentName] = useState("Ker1mof");
   const [inputAgentPosistion, setInputAgentPosistion] = useState("Developer");
-  const [inputAgentAction, setInputAgentAction] = useState("");
+  const [inputAgentAction, setInputAgentAction] = useState("Salam");
   const [inputAgentGreetingMessage, setInputAgentGreetingMessage] = useState("Hello 👋  How may we help you? Just send us a message now to get assistance.");
   const [isCheckedGreetingAnalytics, setIsCheckedGreetingAnalytics] = useState(true);
+
+
 
 
   const handleCheckboxChangeAnalytics = () => {
@@ -193,7 +228,7 @@ export default function Customize() {
         setSolidSelected(false);
       }
     }
-    setCustomizeStyle(prevState => ({ ...prevState, backgroundStyle: solidSelected === true ? true : false }));
+    setCustomizeStyle(prevState => ({ ...prevState, backgroundStyle: solidSelected === true ? 0 : 1 }));
   };
 
   const handleCheckboxChange = (event) => {
@@ -209,7 +244,7 @@ export default function Customize() {
         setClassicSelected(false);
       }
     }
-    setCustomizeStyle(prevState => ({ ...prevState, buttonStyle: classicSelected === true ? true : false }));
+    setCustomizeStyle(prevState => ({ ...prevState, buttonStyle: classicSelected === true ? 0 : 1 }));
   };
 
   const handleImageChange = (event) => {
@@ -255,6 +290,7 @@ export default function Customize() {
   const handleSave = () => {
     HandleDisplay();
     onClose();
+    domainFormik.submitForm();
   };
 
   const [SelectedButtons, setSelectedButtons] = useState([]);
@@ -292,8 +328,17 @@ export default function Customize() {
       { id: 15, Name: "Google Maps", icon: GoogleMaps, AddressUrl: stateAddressUrl }
     ]
   };
+
+
+
+  const { data: AllDomains } = useQuery(["GetAllDomains", '9a524e9c-2507-4721-adaa-f762fa842e2a'], () =>
+    GetAllDomains('9a524e9c-2507-4721-adaa-f762fa842e2a')
+  );
+
+
   return (
     <div className={Styles.MainContainer}>
+
       <div className={Styles.Header}>
         <div style={{ flexWrap: "wrap", display: "flex", gap: "15px", alignItems: "center" }}>
           <h1 className={Styles.Title}>Customize</h1>
@@ -304,6 +349,12 @@ export default function Customize() {
             </div>
             : ""}
         </div>
+        <Select width={'270px'} placeholder='Select option'>
+          {AllDomains?.data && AllDomains?.data?.length > 0 &&
+            AllDomains?.data.map((domain, index) => {
+              return <option key={index} value='option1'>{domain.domainUrl}</option>
+            })}
+        </Select>
         <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
           <button onClick={onOpen} className={Styles.AddDomainButton}><img className={Styles.PlusIcon} src={PlusImage} alt="" />Add new domain</button>
           {display ?
@@ -496,10 +547,10 @@ export default function Customize() {
                       <input
                         type="radio"
                         name="Solid"
-                        checked={classicSelected}
+                        checked={solidSelected}
                         onChange={handleCheckboxBackground}
                       />
-                      <span>Classic</span>
+                      <span>Solid</span>
                     </label>
                   </div>
                 </div>
@@ -509,10 +560,10 @@ export default function Customize() {
                       <input
                         type="radio"
                         name="Gradient"
-                        checked={rectangleSelected}
+                        checked={gradientSelected}
                         onChange={handleCheckboxBackground}
                       />
-                      <span>Rectangle</span>
+                      <span>Gradient</span>
                     </label>
                   </div>
                 </div>
@@ -782,13 +833,13 @@ export default function Customize() {
             )}
           </div>
 
-          <button onClick={() => setSaveChanges(true)} className={Styles.SaveChanges}>
+          <button onClick={() => setSaveChanges(prev => !prev)} className={Styles.SaveChanges}>
             <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.56035 10.25L0.0478516 5.73752L1.17598 4.60939L4.56035 7.99377L11.8239 0.730225L12.952 1.85835L4.56035 10.25Z" fill="#1C1B1F" />
             </svg>
             <span>Save changes</span>
           </button>
-
+          {/* <iframe src='http://localhost:3000/YourCustomizeButtons' /> */}
         </div>
       </div>
     </div>

@@ -14,7 +14,8 @@ import Customize from '../Pages/Customize/Customize'
 import Trigger from "../Pages/Trigger/Trigger";
 import Account from '../Pages/Account/Account'
 import Widgets from '../Pages/Widgets/Widgets'
-import Subscription from '../Pages/Subscription/subscription'
+import Subscription from '../Pages/Subscription/Subscription'
+import CustomizeButtons from "../Components/YourCustomize/CustomizeButtons";
 
 export default function Routes() {
   let routes = [
@@ -29,6 +30,10 @@ export default function Routes() {
       ],
     },
     {
+      path: "/YourCustomizeButtons",
+      element: <CustomizeButtons />,
+    },
+    {
       path: "/beta",
       element: <SignInLayout />,
       children: [
@@ -38,13 +43,13 @@ export default function Routes() {
         },
         {
           path: "/beta/Register",
-          element:<ChakraProvider><SignUpPage /></ChakraProvider>
+          element: <ChakraProvider><SignUpPage /></ChakraProvider>
         },
       ],
     },
     {
       path: "/beta",
-      element: <MenuLayout padding={'padding: 30px 80px 30px 80px'} height={"107px"} border={"1px solid #CBCED2"}  titleColor={'black'} position="initial" />,
+      element: <MenuLayout padding={'padding: 30px 80px 30px 80px'} height={"107px"} border={"1px solid #CBCED2"} titleColor={'black'} position="initial" />,
       children: [
         {
           path: "/beta/customize",

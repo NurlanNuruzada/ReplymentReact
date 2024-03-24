@@ -1,0 +1,41 @@
+/* .FullPageMain {
+    width: 100%;
+    height: 120vh;
+    background-color: rgb(69, 138, 103);
+} */
+
+.YourCustomize {
+    position: fixed;
+    bottom: 21px;
+    right: 25px;
+    width: 260px;
+    background-color: mintcream;
+    background-color: transparent;
+}
+
+.yourButton{
+    width: 100%;
+    margin-top: 15px;
+    font-size: 24px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.5s ease; /* Opacity değeri değiştiğinde 0.3 saniye süren bir geçiş efekti uygula */
+    box-shadow: 20px red;
+}
+
+.yourButton>div{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.yourButton>div>div{
+    width: 50px;
+}
+.yourButton>div>p{
+    max-width: 70%;
+    padding-left: 12px;
+}
