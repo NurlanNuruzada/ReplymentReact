@@ -16,17 +16,21 @@ import Account from '../Pages/Account/Account'
 import Widgets from '../Pages/Widgets/Widgets'
 import CustomizeButtons from "../Components/YourCustomize/CustomizeButtons";
 import Subscription from '../Pages/Subscription/subscription'
+import PrivacyPolicy from "../Pages/Privacy Policy/PrivacyPolicy";
+import Terms from "../Pages/Terms/Terms";
+import HeaderOnlyLayout from '../Layouts/HeaderOnlyLayout/HeaderOnlyLayout'
 
 export default function Routes() {
   let routes = [
     {
       path: "/beta",
-      element: <MainLayout />,
+      element: <MainLayout  />,
       children: [
         {
           path: "/beta/",
           element: <Home />,
         },
+        
       ],
     },
     {
@@ -44,6 +48,21 @@ export default function Routes() {
         {
           path: "/beta/Register",
           element: <ChakraProvider><SignUpPage /></ChakraProvider>
+        },
+      
+      ],
+    },
+    {
+      path: "/beta",
+      element: <HeaderOnlyLayout padding={'padding: 30px 80px 30px 80px'} height={"107px"} border={"1px solid #CBCED2"} titleColor={'black'} position="initial" />,
+      children: [
+        {
+          path: "/beta/PrivacyPolicy",
+          element: <PrivacyPolicy />,
+        },
+        {
+          path: "/beta/Terms",
+          element: <Terms />,
         },
       ],
     },
@@ -70,6 +89,14 @@ export default function Routes() {
         {
           path: "/beta/Subscription",
           element: <Subscription />,
+        },
+        {
+          path: "/beta/PrivacyPolicy",
+          element: <PrivacyPolicy />,
+        },
+        {
+          path: "/beta/Terms",
+          element: <Terms />,
         },
       ],
     },

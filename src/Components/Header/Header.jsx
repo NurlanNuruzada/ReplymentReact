@@ -43,7 +43,7 @@ export default function Header({ MenuItems, ShowBurgerMenu, ShowButtons, Positio
     const isSmallScreen = WindowSize.innerWidth <= 1051;
 
     return (
-        <div style={{ position: DisplayPosition, border: Border, height: Height, padding: Padding }} className={Styles.MainContainer}>
+        <div style={{ position: `${Position}`, border: Border, height: Height, padding: Padding }} className={Styles.MainContainer}>
             <div className={Styles.LogoContainer}>
                 <img src={MainLogo} alt="" />
                 <h1 style={{ color: TitleColor }}>Replyment</h1>
@@ -107,7 +107,7 @@ export default function Header({ MenuItems, ShowBurgerMenu, ShowButtons, Positio
                         fontSize={26}
                     />
                     <MenuList>
-                        {MenuItems.map((element, index) => (
+                        {MenuItems?.map((element, index) => (
                             <MenuItem onClick={handleNavigate(element)} className={Styles.InlineMenuText} key={index}>{element}</MenuItem>
                         ))}
                     </MenuList>

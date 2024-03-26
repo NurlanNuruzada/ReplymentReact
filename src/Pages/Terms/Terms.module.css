@@ -1,0 +1,58 @@
+.Header {
+    font-family: Urbanist;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+    text-align: left;
+    color: #1C1B1F;
+
+}
+
+.ButtonDate button {
+    font-family: Urbanist;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #1C1B1F;
+    padding: 23.5px;
+    gap: 16px;
+    border-radius: 252px;
+    border: 1px solid #CBCED2
+}
+
+.ButtonDate {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.MainTitleConatiner {
+    padding: 15px 0px 15px 0px;
+    gap: 10px;
+    border-bottom: 1px solid #CBCED2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.Main {
+    width: 100%;
+}
+
+@media screen and (max-width: 9px) {
+    .EmailAddress {
+        display: none;
+    }
+}
+
+.MainText{
+    font-family: Urbanist;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+    text-align: left;
+    color: #1C1B1F;
+}
