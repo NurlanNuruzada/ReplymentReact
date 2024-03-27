@@ -1,9 +1,8 @@
-const { Img } = require('./src/Vector.png');
 const express = require('express');
 const path = require('path');
 const app = express();
 
-
+// Serve static files from the build directory
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/healthz', (req, res) => res.send('Healthy'));
